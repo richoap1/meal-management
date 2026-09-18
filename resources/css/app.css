@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root {
+    --app-ink: #17231f;
+    --app-muted: #718078;
+    --app-line: #dfe7e1;
+    --app-green: #1d6b50;
+}
+
+html { min-width: 320px; }
+
+body { overflow-x: hidden; }
+
+nav > div { min-width: 0; }
+
+nav > div > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    white-space: nowrap;
+}
+
+nav a, nav button { flex: 0 0 auto; }
+
+main.max-w-7xl { width: 100%; }
+
+input, select, textarea { max-width: 100%; }
+
+img { max-width: 100%; }
+
+@media (max-width: 639px) {
+    nav { padding: .75rem 1rem !important; }
+    nav > div { align-items: flex-start; flex-direction: column; gap: .7rem; }
+    nav > div > div:last-child { width: 100%; padding-bottom: .2rem; }
+    nav > div > div:last-child > span { border-left: 0; padding-left: 0; }
+    main.max-w-7xl { padding: 1rem !important; }
+    .rounded-xl, .rounded-2xl { border-radius: .75rem; }
+    form .grid { grid-template-columns: 1fr; }
+    form button, form input[type="submit"] { max-width: 100%; }
+    input[type="file"] { font-size: .75rem; }
+    h1 { overflow-wrap: anywhere; }
+    table { min-width: 680px; }
+    .overflow-x-auto { -webkit-overflow-scrolling: touch; }
+    [class*="max-w-"] { max-width: 100%; }
+}
+
+@media (min-width: 640px) {
+    nav > div > div:last-child { overflow-x: visible; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

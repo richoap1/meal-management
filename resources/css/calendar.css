@@ -1,0 +1,45 @@
+:root {
+    --calendar-ink: #17231f;
+    --calendar-muted: #718078;
+    --calendar-line: #dfe7e1;
+    --calendar-green: #1d6b50;
+    --calendar-soft: #f1f8ef;
+}
+
+#calendar { min-width: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+#calendar .fc { min-width: 640px; color: var(--calendar-ink); font-family: 'DM Sans', sans-serif; }
+#calendar .fc-toolbar { display: grid; grid-template-areas: 'title' 'buttons'; gap: 14px; margin-bottom: 18px; }
+#calendar .fc-toolbar-title { grid-area: title; font: 600 1.2rem 'Space Grotesk', sans-serif; }
+#calendar .fc-toolbar-chunk { display: flex; flex-wrap: wrap; gap: 6px; }
+#calendar .fc-toolbar-chunk:nth-child(2), #calendar .fc-toolbar-chunk:last-child { justify-content: flex-start; }
+#calendar .fc-button { border: 1px solid var(--calendar-line); border-radius: 7px; background: #fff; padding: 8px 10px; color: var(--calendar-ink); font-size: .75rem; font-weight: 700; box-shadow: none; }
+#calendar .fc-button:hover, #calendar .fc-button:focus, #calendar .fc-button.fc-button-active { border-color: var(--calendar-green); background: var(--calendar-soft); color: var(--calendar-green); box-shadow: none; }
+#calendar .fc-col-header-cell-cushion, #calendar .fc-daygrid-day-number { color: var(--calendar-muted); font-size: .75rem; text-decoration: none; }
+#calendar .fc-daygrid-day { min-height: 90px; }
+#calendar .fc-day-today { background: #f8fbf1 !important; }
+#calendar .fc-event { border: 0; border-radius: 5px; background: var(--calendar-green); padding: 3px 5px; cursor: pointer; }
+#calendar .fc-event-title { overflow: hidden; color: #fff; font-size: .7rem; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+#mealModal { overscroll-behavior: contain; }
+#mealModal > div { width: min(100%, 672px); }
+#modalBody { overflow-wrap: anywhere; }
+#modalBody img { max-width: 100%; }
+
+@media (min-width: 640px) {
+    #calendar .fc { min-width: 0; }
+    #calendar .fc-toolbar { grid-template-areas: 'title buttons'; grid-template-columns: 1fr auto; align-items: center; }
+    #calendar .fc-toolbar-chunk:nth-child(2), #calendar .fc-toolbar-chunk:last-child { justify-content: flex-end; }
+    #calendar .fc-daygrid-day { min-height: 112px; }
+}
+
+@media (max-width: 639px) {
+    body { overflow-x: hidden; }
+    main.max-w-7xl { padding: 1rem; }
+    #mealModal { align-items: flex-end; padding: 0; }
+    #mealModal > div { max-height: 92vh; border-radius: 18px 18px 0 0; }
+    #modalBody, #mealModal > div > div:first-child { padding: 1rem; }
+    #modalBody img { height: 10rem; object-fit: cover; }
+    #modalBody .flex.gap-2 { flex-direction: column; }
+    #modalBody .flex.gap-2 button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) { #calendar { scroll-behavior: auto; } }
