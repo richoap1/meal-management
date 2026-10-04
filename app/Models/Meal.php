@@ -11,15 +11,24 @@ class Meal extends Model
 
     protected $fillable = [
         'name',
+        'seller_name',
         'description',
         'ingredients',
         'instructions',
         'price',
         'calories',
+        'carbs',
         'image_path',
         'type',
+        'sport_segments',
         'is_available',
     ];
 
-    protected $casts = ['calories' => 'integer', 'price' => 'float', 'is_available' => 'boolean'];
+    protected $casts = [
+        'calories' => 'integer',
+        'carbs' => 'integer',
+        'price' => 'float',
+        'sport_segments' => 'array',
+        'is_available' => 'boolean',
+    ];
 }

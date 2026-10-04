@@ -56,16 +56,22 @@ class AdminMealController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:150'],
+            'seller_name' => ['nullable', 'string', 'max:150'],
             'description' => ['nullable', 'string', 'max:1000'],
             'ingredients' => ['required', 'string', 'max:5000'],
             'instructions' => ['required', 'string', 'max:5000'],
             'price' => ['nullable', 'numeric', 'min:0'],
             'calories' => ['required', 'integer', 'min:0', 'max:10000'],
+            'carbs' => ['required_with:seller_name', 'nullable', 'integer', 'min:0', 'max:1000'],
             'type' => ['required', 'in:breakfast,lunch,dinner'],
+            'sport_segments' => ['required_with:seller_name', 'nullable', 'array', 'min:1'],
+            'sport_segments.*' => ['in:binaraga,cycling,runner'],
             'is_available' => ['nullable', 'boolean'],
             'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
         ]);
         $data['is_available'] = $request->boolean('is_available');
+        $data['sport_segments'] = !empty($data['seller_name']) ? ($data['sport_segments'] ?? []) : null;
+
         return $data;
     }
 }

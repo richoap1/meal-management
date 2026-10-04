@@ -8,6 +8,7 @@ use App\Http\Controllers\MembershipController;
 
 Route::middleware('web')->group(function () {
     Route::post('/stores/nearest', [StoreController::class, 'findNearest']);
+    Route::get('/meal-prep/umkm-menus', [MealPrepController::class, 'umkmMenus']);
     Route::post('/meal-prep/generate', [MealPrepController::class, 'generatePlan']);
     Route::get('/membership', [MembershipController::class, 'show']);
     Route::post('/membership', [MembershipController::class, 'update']);
@@ -16,4 +17,3 @@ Route::middleware('web')->group(function () {
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-

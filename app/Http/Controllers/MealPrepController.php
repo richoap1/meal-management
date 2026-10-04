@@ -6,13 +6,14 @@ use App\Models\Meal;
 use App\Models\StoreProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 use Carbon\Carbon;
 
 class MealPrepController extends Controller
 {
     public function index()
     {
-        return view('planner', ['meals' => Meal::all()]);
+        return view('planner');
     }
 
     public function getEvents()
@@ -43,28 +44,48 @@ class MealPrepController extends Controller
             'store_id' => 'required|exists:stores,id',
             'budget' => 'required|numeric|min:25000|max:1000000',
             'is_subscribed' => 'nullable|boolean',
-            'is_diet' => 'nullable|boolean',
-            'weight' => 'required_if:is_diet,1|nullable|numeric|min:20|max:300',
-            'age' => 'required_if:is_diet,1|nullable|integer|min:13|max:100',
-            'height' => 'required_if:is_diet,1|nullable|numeric|min:100|max:230',
-            'sex' => 'required_if:is_diet,1|nullable|in:male,female',
+            'sport' => 'required|in:binaraga,cycling,runner',
+            'weight' => 'required|numeric|min:20|max:300',
+            'age' => 'required|integer|min:13|max:100',
+            'height' => 'required|numeric|min:100|max:230',
+            'sex' => 'required|in:male,female',
+            'muscle_groups' => 'required_if:sport,binaraga|array|min:1',
+            'muscle_groups.*' => 'in:Dada,Bahu,Lengan,Perut,Punggung,Glutes,Kaki',
+            'equipment' => 'required|array|min:1',
+            'equipment.*' => 'in:kompor,rice_cooker,oven,air_fryer,steamer,blender,knife,measuring_tools,food_storage',
             'start_date' => 'required|date',
             'end_date' => 'required_if:is_subscribed,1|nullable|date|after_or_equal:start_date',
         ]);
+        if (!array_intersect($data['equipment'], ['kompor', 'rice_cooker', 'oven', 'air_fryer', 'steamer'])) {
+            throw ValidationException::withMessages([
+                'equipment' => 'Pilih minimal satu alat masak utama yang tersedia di rumah.',
+            ]);
+        }
 
         $isSubscribed = Auth::check() ? (bool) Auth::user()->is_subscribed : (bool) ($data['is_subscribed'] ?? $request->session()->get('is_subscribed', false));
-        $isDiet = (bool) ($data['is_diet'] ?? false);
         $startDate = Carbon::parse($data['start_date'])->startOfDay();
-        $endDate = $isSubscribed ? Carbon::parse($data['end_date'])->startOfDay() : $startDate->copy();
+        $endDate = $isSubscribed ? Carbon::parse($data['end_date'] ?? $data['start_date'])->startOfDay() : $startDate->copy();
         $calendarDays = $startDate->diff($endDate)->days + 1;
         $days = $isSubscribed ? $calendarDays : 1;
-        $bmi = $isDiet ? round($data['weight'] / (($data['height'] / 100) ** 2), 1) : null;
-        $bmr = $isDiet
-            ? (10 * $data['weight']) + (6.25 * $data['height']) - (5 * $data['age']) + ($data['sex'] === 'male' ? 5 : -161)
-            : null;
-        $maintenanceCalories = $isDiet ? round($bmr * 1.2) : null;
-        $dailyCalories = $isDiet ? max($data['sex'] === 'male' ? 1500 : 1200, $maintenanceCalories - min(500, max(300, round($maintenanceCalories * .15)))) : null;
-        $maxCarbs = $dailyCalories ? round(($dailyCalories * .45) / 4) : null;
+        $bmr = (10 * $data['weight']) + (6.25 * $data['height']) - (5 * $data['age']) + ($data['sex'] === 'male' ? 5 : -161);
+        $activityFactor = match ($data['sport']) {
+            'binaraga' => 1.55,
+            'cycling' => 1.725,
+            'runner' => 1.65,
+        };
+        $dailyCalories = (int) round($bmr * $activityFactor);
+        $carbohydrateRatio = match ($data['sport']) {
+            'binaraga' => .45,
+            'cycling' => .60,
+            'runner' => .55,
+        };
+        $proteinRatio = match ($data['sport']) {
+            'binaraga' => .30,
+            'cycling' => .15,
+            'runner' => .20,
+        };
+        $maxCarbs = (int) round(($dailyCalories * $carbohydrateRatio) / 4);
+        $proteinTarget = (int) round(($dailyCalories * $proteinRatio) / 4);
         $inventory = ['Karbohidrat' => [], 'Protein' => [], 'Sayuran' => []];
         $totalCost = 0;
         $nutrition = ['Karbohidrat' => ['calories' => 250, 'carbs' => 45], 'Protein' => ['calories' => 220, 'carbs' => 3], 'Sayuran' => ['calories' => 80, 'carbs' => 12]];
@@ -109,15 +130,11 @@ class MealPrepController extends Controller
                 $selected = $shuffledInventory->map(fn ($items) => $items->get($mealIndex % $items->count()));
                 $mealCalories = $selected->sum('calories');
                 $mealCarbs = $selected->sum('carbs');
-                if ($isDiet) {
-                    $mealCalories = round($mealCalories * .7);
-                    $mealCarbs = round($mealCarbs * .7);
-                }
                 $recipeIngredients = $selected->map(fn ($item, $category) => [
                     'name' => $item['name'],
                     'quantity' => $this->portionFor($category, $item['name']),
                 ])->values()->all();
-                $recipe = $this->recipeFor($type, $recipeIngredients, $usedRecipes[$type], $isDiet);
+                $recipe = $this->recipeFor($type, $recipeIngredients, $usedRecipes[$type], $data['equipment']);
                 $usedRecipes[$type][] = $recipe['title'];
                 $mealPlan[$dateLabel][$type] = [
                     'menu' => $selected->pluck('name')->values(),
@@ -141,15 +158,44 @@ class MealPrepController extends Controller
             'daily_calories' => $dailyPlanCalories,
             'daily_carbs' => $dailyPlanCarbs,
             'max_carbs_per_day' => $maxCarbs,
-            'bmi' => $bmi,
-            'maintenance_calories' => $maintenanceCalories,
             'recommended_calories' => $dailyCalories,
-            'weight_goal' => $bmi >= 25 ? 'Weight-loss target' : 'Healthy maintenance target',
-            'diet' => $isDiet,
+            'protein_target' => $proteinTarget,
+            'activity_factor' => $activityFactor,
+            'sport' => $data['sport'],
+            'muscle_groups' => $data['muscle_groups'] ?? [],
+            'equipment' => $data['equipment'],
             'start_date' => $startDate->toDateString(),
             'end_date' => $endDate->toDateString(),
             'meal_plan' => $mealPlan,
         ]);
+    }
+
+    public function umkmMenus(Request $request)
+    {
+        $data = $request->validate(['sport' => ['required', 'in:binaraga,cycling,runner']]);
+
+        $menus = Meal::query()
+            ->where('is_available', true)
+            ->whereNotNull('seller_name')
+            ->where('seller_name', '!=', '')
+            ->get()
+            ->filter(fn (Meal $meal) => in_array($data['sport'], $meal->sport_segments ?? [], true))
+            ->values()
+            ->map(fn (Meal $meal) => [
+                'id' => $meal->id,
+                'name' => $meal->name,
+                'seller_name' => $meal->seller_name,
+                'description' => $meal->description,
+                'price' => $meal->price,
+                'calories' => $meal->calories,
+                'carbs' => $meal->carbs,
+                'type' => $meal->type,
+                'image_url' => $meal->image_path ? asset('storage/'.$meal->image_path) : $this->recipeImage(ucfirst($meal->type)),
+                'ingredients' => preg_split('/\r\n|\r|\n/', $meal->ingredients ?: '', -1, PREG_SPLIT_NO_EMPTY),
+                'instructions' => preg_split('/\r\n|\r|\n/', $meal->instructions ?: '', -1, PREG_SPLIT_NO_EMPTY),
+            ]);
+
+        return response()->json(['status' => 'success', 'data' => $menus]);
     }
 
     private function productImage(string $category): string
@@ -170,7 +216,7 @@ class MealPrepController extends Controller
         };
     }
 
-    private function recipeFor(string $type, array $ingredients, array $usedTitles = [], bool $isDiet = false): array
+    private function recipeFor(string $type, array $ingredients, array $usedTitles = [], array $equipment = []): array
     {
         $recipes = [
             'Breakfast' => [
@@ -207,25 +253,6 @@ class MealPrepController extends Controller
             ['title' => 'Low-fuss dinner plate', 'steps' => ['Potong sayuran dan protein seperlunya.', 'Masak protein lalu tambahkan sayuran.', 'Sajikan dengan karbohidrat yang sudah matang.']],
             ['title' => 'Garden protein supper', 'steps' => ['Kukus sayuran hingga renyah lembut.', 'Panggang protein hingga matang merata.', 'Sajikan bersama karbohidrat dalam porsi seimbang.']],
         ]);
-        if ($isDiet) {
-            $recipes = [
-                'Breakfast' => [
-                    ['title' => 'Low-calorie veggie omelette', 'steps' => ['Gunakan sedikit minyak atau wajan anti lengket.', 'Masak protein bersama sayuran sampai matang.', 'Sajikan dengan karbohidrat dalam porsi kecil.']],
-                    ['title' => 'Light protein breakfast bowl', 'steps' => ['Gunakan karbohidrat sesuai takaran diet.', 'Masak protein dengan cara kukus atau panggang.', 'Tambahkan sayuran tanpa saus tinggi kalori.']],
-                    ['title' => 'Fresh lean breakfast plate', 'steps' => ['Kukus sayuran hingga matang.', 'Panggang protein tanpa lemak berlebih.', 'Sajikan dengan karbohidrat secukupnya.']],
-                ],
-                'Lunch' => [
-                    ['title' => 'Lean protein salad bowl', 'steps' => ['Cuci dan potong sayuran.', 'Panggang protein tanpa banyak minyak.', 'Sajikan dengan sedikit karbohidrat dan bumbu ringan.']],
-                    ['title' => 'Light balanced lunch', 'steps' => ['Kukus sayuran untuk menjaga teksturnya.', 'Masak protein dengan api sedang.', 'Batasi karbohidrat sesuai takaran.']],
-                    ['title' => 'Low-calorie power plate', 'steps' => ['Siapkan karbohidrat dalam porsi kecil.', 'Panggang atau kukus protein.', 'Isi setengah piring dengan sayuran.']],
-                ],
-                'Dinner' => [
-                    ['title' => 'Light protein dinner bowl', 'steps' => ['Kukus sayuran sampai renyah lembut.', 'Panggang protein tanpa minyak berlebih.', 'Gunakan karbohidrat sedikit.']],
-                    ['title' => 'Low-carb veggie dinner', 'steps' => ['Tumis sayuran dengan sedikit air atau minyak.', 'Masak protein sampai matang sempurna.', 'Gunakan karbohidrat sesuai porsi diet.']],
-                    ['title' => 'Lean one-pan supper', 'steps' => ['Gunakan wajan anti lengket.', 'Masak protein dan sayuran tanpa saus manis.', 'Tambahkan karbohidrat secukupnya.']],
-                ],
-            ];
-        }
         $options = collect($recipes[$type] ?? $recipes['Dinner'])
             ->reject(fn ($recipe) => in_array($recipe['title'], $usedTitles, true))
             ->values()
@@ -237,8 +264,27 @@ class MealPrepController extends Controller
             'title' => $recipe['title'],
             'ingredients' => $ingredients,
             'servings' => 1,
-            'steps' => $recipe['steps'],
+            'steps' => $this->cookingSteps($equipment),
+            'equipment' => $equipment,
         ];
+    }
+
+    private function cookingSteps(array $equipment): array
+    {
+        if (in_array('kompor', $equipment, true)) {
+            return ['Siapkan bahan dan masak karbohidrat sesuai takaran.', 'Masak protein hingga matang menggunakan kompor dan wajan.', 'Tambahkan sayuran, bumbui secukupnya, lalu sajikan.'];
+        }
+        if (in_array('rice_cooker', $equipment, true)) {
+            return ['Siapkan bahan dan masak karbohidrat di rice cooker.', 'Kukus protein menggunakan keranjang rice cooker hingga matang.', 'Tambahkan sayuran kukus dan bumbu, lalu sajikan.'];
+        }
+        if (in_array('oven', $equipment, true)) {
+            return ['Panaskan oven sesuai petunjuk alat.', 'Panggang protein dan sayuran hingga matang merata.', 'Sajikan bersama karbohidrat yang telah dimasak.'];
+        }
+        if (in_array('air_fryer', $equipment, true)) {
+            return ['Siapkan bahan dan bumbui protein secukupnya.', 'Masak protein dan sayuran di air fryer hingga matang.', 'Sajikan dengan karbohidrat yang telah dimasak.'];
+        }
+
+        return ['Siapkan bahan dan atur dalam wadah tahan panas.', 'Kukus karbohidrat, protein, dan sayuran hingga matang.', 'Bumbui secukupnya lalu sajikan hangat.'];
     }
 
     private function portionFor(string $category, string $productName): string
