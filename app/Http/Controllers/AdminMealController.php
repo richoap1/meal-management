@@ -15,7 +15,7 @@ class AdminMealController extends Controller
 
     public function create()
     {
-        return view('admin.recipes.form', ['meal' => new Meal()]);
+        return view('admin.recipes.form', ['meal' => new Meal]);
     }
 
     public function store(Request $request)
@@ -70,7 +70,7 @@ class AdminMealController extends Controller
             'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
         ]);
         $data['is_available'] = $request->boolean('is_available');
-        $data['sport_segments'] = !empty($data['seller_name']) ? ($data['sport_segments'] ?? []) : null;
+        $data['sport_segments'] = ! empty($data['seller_name']) ? ($data['sport_segments'] ?? []) : null;
 
         return $data;
     }

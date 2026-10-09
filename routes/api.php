@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StoreController;
 use App\Http\Controllers\MealPrepController;
 use App\Http\Controllers\MembershipController;
+use App\Http\Controllers\StoreController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 Route::middleware('web')->group(function () {
     Route::post('/stores/nearest', [StoreController::class, 'findNearest']);

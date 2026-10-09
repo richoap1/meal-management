@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-    Schema::create('store_products', function (Blueprint $table) {
-        $table->id();
-        $table->foreignId('store_id')->constrained()->onDelete('cascade'); // Relasi ke tabel stores
-        $table->string('product_name'); // Nama bahan (misal: Telur 1kg, Dada Ayam)
-        $table->decimal('price', 10, 2); // Harga di swalayan tersebut
-        $table->string('category'); // Sayuran, Daging, Karbohidrat, dll
-        $table->boolean('is_available')->default(true);
-        $table->timestamps();
-    });
+        Schema::create('store_products', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('store_id')->constrained()->onDelete('cascade'); // Relasi ke tabel stores
+            $table->string('product_name'); // Nama bahan (misal: Telur 1kg, Dada Ayam)
+            $table->decimal('price', 10, 2); // Harga di swalayan tersebut
+            $table->string('category'); // Sayuran, Daging, Karbohidrat, dll
+            $table->boolean('is_available')->default(true);
+            $table->timestamps();
+        });
     }
 
     /**

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class MembershipController extends Controller
 {
@@ -27,9 +27,9 @@ class MembershipController extends Controller
             return back()->with('error', 'Masih ada pembayaran yang menunggu verifikasi admin.');
         }
 
-        $reference = $data['method'] === 'qris' ? 'QRIS-' . strtoupper(Str::random(10)) : null;
+        $reference = $data['method'] === 'qris' ? 'QRIS-'.strtoupper(Str::random(10)) : null;
         $request->user()->subscriptionPayments()->create([
-            'invoice_number' => 'MW-' . now()->format('Ymd') . '-' . strtoupper(Str::random(6)),
+            'invoice_number' => 'MW-'.now()->format('Ymd').'-'.strtoupper(Str::random(6)),
             'method' => $data['method'],
             'amount' => config('services.subscription.price', 20000),
             'proof_path' => $request->file('proof')?->store('payment-proofs', 'public'),

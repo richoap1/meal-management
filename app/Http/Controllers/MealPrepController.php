@@ -405,19 +405,55 @@ class MealPrepController extends Controller
             : [];
 
         if (in_array('kompor', $equipment, true)) {
-            return array_merge([$prepStep, 'Masak protein hingga matang menggunakan kompor dan wajan.', 'Masak '.$carbohydrate.' sesuai petunjuk kemasan, tumis '.$vegetable.' sampai matang, lalu sajikan bersama '.$protein.'.'], $storageStep);
+            return array_merge(
+                [
+                    $prepStep,
+                    'Masak protein hingga matang menggunakan kompor dan wajan.',
+                    'Masak '.$carbohydrate.' sesuai petunjuk kemasan, tumis '.$vegetable.
+                        ' sampai matang, lalu sajikan bersama '.$protein.'.',
+                ],
+                $storageStep,
+            );
         }
         if (in_array('rice_cooker', $equipment, true)) {
-            return array_merge([$prepStep.' Masak '.$carbohydrate.' di rice cooker.', 'Masak '.$protein.' hingga matang di rice cooker.', 'Tambahkan '.$vegetable.' dan masak hingga matang, lalu sajikan.'], $storageStep);
+            return array_merge(
+                [
+                    $prepStep.' Masak '.$carbohydrate.' di rice cooker.',
+                    'Masak '.$protein.' hingga matang di rice cooker.',
+                    'Tambahkan '.$vegetable.' dan masak hingga matang, lalu sajikan.',
+                ],
+                $storageStep,
+            );
         }
         if (in_array('oven', $equipment, true)) {
-            return array_merge([$prepStep.' Panaskan oven sesuai petunjuk alat.', 'Panggang '.$carbohydrate.', '.$protein.', dan '.$vegetable.' hingga matang merata, lalu sajikan.'], $storageStep);
+            return array_merge(
+                [
+                    $prepStep.' Panaskan oven sesuai petunjuk alat.',
+                    'Panggang '.$carbohydrate.', '.$protein.', dan '.$vegetable.
+                        ' hingga matang merata, lalu sajikan.',
+                ],
+                $storageStep,
+            );
         }
         if (in_array('air_fryer', $equipment, true)) {
-            return array_merge([$prepStep.' Bumbui '.$protein.' secukupnya.', 'Masak '.$carbohydrate.', '.$protein.', dan '.$vegetable.' di air fryer hingga matang, lalu sajikan.'], $storageStep);
+            return array_merge(
+                [
+                    $prepStep.' Bumbui '.$protein.' secukupnya.',
+                    'Masak '.$carbohydrate.', '.$protein.', dan '.$vegetable.
+                        ' di air fryer hingga matang, lalu sajikan.',
+                ],
+                $storageStep,
+            );
         }
 
-        return array_merge([$prepStep.' Atur bahan dalam wadah tahan panas.', 'Kukus '.$carbohydrate.', '.$protein.', dan '.$vegetable.' hingga matang, lalu sajikan hangat.'], $storageStep);
+        return array_merge(
+            [
+                $prepStep.' Atur bahan dalam wadah tahan panas.',
+                'Kukus '.$carbohydrate.', '.$protein.', dan '.$vegetable.
+                    ' hingga matang, lalu sajikan hangat.',
+            ],
+            $storageStep,
+        );
     }
 
     private function canCookCarbohydrate(StoreProduct $product, array $equipment): bool

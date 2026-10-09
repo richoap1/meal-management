@@ -22,14 +22,17 @@ class AdminUserController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:100'],
-            'email' => ['required', 'email', 'max:255', 'unique:users,email,' . $user->id],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email,'.$user->id],
             'role' => ['required', 'in:admin,user,member'],
             'is_subscribed' => ['nullable', 'boolean'],
             'password' => ['nullable', 'string', 'min:8'],
         ]);
         $data['is_subscribed'] = $request->boolean('is_subscribed');
-        if ($data['password'] ?? false) $data['password'] = Hash::make($data['password']);
-        else unset($data['password']);
+        if ($data['password'] ?? false) {
+            $data['password'] = Hash::make($data['password']);
+        } else {
+            unset($data['password']);
+        }
         $user->update($data);
 
         return redirect()->route('admin.users.index')->with('success', 'User berhasil diperbarui.');

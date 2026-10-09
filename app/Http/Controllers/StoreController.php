@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Store;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
@@ -13,7 +12,7 @@ class StoreController extends Controller
         // 1. Validasi input koordinat dari perangkat user
         $request->validate([
             'latitude' => 'required|numeric',
-            'longitude' => 'required|numeric'
+            'longitude' => 'required|numeric',
         ]);
 
         $userLat = $request->latitude;
@@ -21,21 +20,21 @@ class StoreController extends Controller
 
         // 2. Query ke database dengan Rumus Haversine (Konstanta 6371 untuk Kilometer)
         $stores = Store::select('stores.*')
-            ->selectRaw("
+            ->selectRaw('
                 ( 6371 * acos( cos( radians(?) ) *
                   cos( radians( latitude ) ) *
                   cos( radians( longitude ) - radians(?) ) +
                   sin( radians(?) ) *
                   sin( radians( latitude ) ) )
                 ) AS distance
-            ", [$userLat, $userLng, $userLat])
+            ', [$userLat, $userLng, $userLat])
             ->having('distance', '<', 20) // Batasi pencarian maksimum radius 20 km
             ->orderBy('distance', 'asc')  // Urutkan dari yang terdekat
             ->get();
 
         return response()->json([
             'status' => 'success',
-            'data' => $stores
+            'data' => $stores,
         ]);
     }
 }

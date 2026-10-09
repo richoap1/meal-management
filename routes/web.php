@@ -1,17 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MealPrepController;
-use App\Http\Controllers\StoreController;
-use App\Http\Controllers\MembershipController;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminMealController;
+use App\Http\Controllers\AdminPaymentController;
 use App\Http\Controllers\AdminStoreController;
 use App\Http\Controllers\AdminUserController;
-use App\Http\Controllers\AdminPaymentController;
-use App\Http\Controllers\RecipeController;
-use App\Http\Controllers\AdminMealController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MealPlanController;
+use App\Http\Controllers\MealPrepController;
+use App\Http\Controllers\MembershipController;
+use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\StoreController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,7 +34,7 @@ Route::middleware(['auth'])->group(function () {
     // Planner & Meals
     Route::get('/planner', [MealPrepController::class, 'index'])->name('planner.index');
     Route::post('/planner', [MealPrepController::class, 'store'])->name('planner.store');
-    
+
     // Tambahkan baris ini untuk endpoint FullCalendar
     Route::get('/planner/events', [MealPrepController::class, 'getEvents'])->name('planner.events');
     Route::get('/calendar', [MealPlanController::class, 'index'])->name('calendar.index');
@@ -42,11 +42,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/calendar/entries', [MealPlanController::class, 'store'])->name('calendar.entries.store');
     Route::patch('/calendar/entries/{entry}', [MealPlanController::class, 'update'])->name('calendar.entries.update');
     Route::delete('/calendar/entries/{entry}', [MealPlanController::class, 'destroy'])->name('calendar.entries.destroy');
-    
+
     // Stores & Products
     Route::get('/stores', [StoreController::class, 'index'])->name('stores.index');
     Route::get('/stores/{store}/products', [StoreController::class, 'show'])->name('stores.products');
-    
+
     // Membership
     Route::get('/membership', [MembershipController::class, 'index'])->name('membership.index');
     Route::post('/membership/upgrade', [MembershipController::class, 'submit'])->name('membership.upgrade');

@@ -11,5 +11,8 @@ class MealPlanEntry extends Model
 
     protected $casts = ['meal_date' => 'date', 'recipe' => 'array', 'ingredients' => 'array', 'calories' => 'integer', 'carbs' => 'integer'];
 
-    public function store(): BelongsTo { return $this->belongsTo(Store::class); }
+    public function store(): BelongsTo
+    {
+        return $this->belongsTo(Store::class);
+    }
 }

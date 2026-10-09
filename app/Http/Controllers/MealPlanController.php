@@ -63,6 +63,7 @@ class MealPlanController extends Controller
         abort_unless($entry->user_id === $request->user()->id, 404);
         $data = $request->validate(['date' => ['required', 'date']]);
         $entry->update(['meal_date' => Carbon::parse($data['date'])->toDateString()]);
+
         return response()->json(['status' => 'success']);
     }
 
@@ -70,11 +71,20 @@ class MealPlanController extends Controller
     {
         abort_unless($entry->user_id === $request->user()->id, 404);
         $entry->delete();
+
         return response()->json(['status' => 'success']);
     }
 
     private function details(MealPlanEntry $entry): array
     {
-        return ['type' => $entry->meal_type, 'calories' => $entry->calories, 'carbs' => $entry->carbs, 'recipe' => $entry->recipe, 'ingredients' => $entry->ingredients, 'image_url' => $entry->image_url, 'store' => $entry->store?->only(['name', 'address', 'latitude', 'longitude'])];
+        return [
+            'type' => $entry->meal_type,
+            'calories' => $entry->calories,
+            'carbs' => $entry->carbs,
+            'recipe' => $entry->recipe,
+            'ingredients' => $entry->ingredients,
+            'image_url' => $entry->image_url,
+            'store' => $entry->store?->only(['name', 'address', 'latitude', 'longitude']),
+        ];
     }
 }

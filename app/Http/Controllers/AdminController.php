@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Meal;
 use App\Models\Store;
 use App\Models\StoreProduct;
-use App\Models\Meal;
+use App\Models\User;
+
 // use App\Models\Meal; // Buka komentar ini jika model Meal sudah ada
 // use App\Models\Store; // Buka komentar ini jika model Store sudah ada
 

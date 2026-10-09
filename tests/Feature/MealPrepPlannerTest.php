@@ -16,17 +16,22 @@ class MealPrepPlannerTest extends TestCase
 
     public function test_authenticated_user_can_open_the_multistep_planner(): void
     {
-        $this->actingAs(User::factory()->create())
+        $response = $this->actingAs(User::factory()->create())
             ->get('/planner')
-            ->assertOk()
+            ->assertOk();
+
+        $response
             ->assertSee('Pilih olahraga atau program makan')
             ->assertSee('Cycling')
-            ->assertSee('Aktivitas normal')
             ->assertSee('BMI digunakan sebagai skrining umum')
-            ->assertSee('Pilih bagian otot')
             ->assertSee('Peralatan di rumah')
             ->assertSee('Anggaran')
             ->assertSee('Menu UMKM sesuai pilihan Anda');
+
+        $this->assertMatchesRegularExpression(
+            '/Aktivitas\s+normal.*Pilih\s+bagian otot/s',
+            strip_tags($response->getContent()),
+        );
     }
 
     public function test_generates_sport_specific_calorie_and_carbohydrate_targets(): void

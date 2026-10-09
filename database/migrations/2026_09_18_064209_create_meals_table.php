@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-    Schema::create('meals', function (Blueprint $table) {
-        $table->id();
-        $table->string('name');
-        $table->text('description')->nullable();
-        $table->decimal('price', 10, 2); // Format desimal untuk nominal harga
-        $table->enum('type', ['breakfast', 'lunch', 'dinner'])->default('lunch');
-        $table->boolean('is_available')->default(true);
-        $table->timestamps();
-    });
+        Schema::create('meals', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->decimal('price', 10, 2); // Format desimal untuk nominal harga
+            $table->enum('type', ['breakfast', 'lunch', 'dinner'])->default('lunch');
+            $table->boolean('is_available')->default(true);
+            $table->timestamps();
+        });
     }
 
     /**
