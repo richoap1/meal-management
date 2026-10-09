@@ -287,6 +287,11 @@ footer span { padding: 0 5px; color: var(--coral); }
 .plan-columns h3 { margin: 0 0 11px; color: var(--ink); font: 600 14px 'Space Grotesk', sans-serif; }
 .shopping-list { margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 12px; }
 .shopping-list li { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px solid #edf1ed; padding: 9px 0; }
+.shopping-list > .shopping-day { display: block; padding: 12px 0; }
+.shopping-day-heading { display: grid; gap: 4px; }
+.shopping-day-heading small { color: var(--muted); font-size: 11px; }
+.shopping-list .daily-shopping-products { margin: 8px 0 0; padding: 0; list-style: none; }
+.shopping-list .daily-shopping-products li { display: flex; justify-content: flex-start; }
 .shopping-list b { color: var(--ink); font-weight: 600; }
 .meal-day { border-bottom: 1px solid #edf1ed; padding: 10px 0; }
 .meal-day strong { font-size: 13px; }
@@ -327,6 +332,9 @@ footer span { padding: 0 5px; color: var(--coral); }
 .profile-fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 11px; }
 .profile-fields label, .profile-fields select, .profile-fields input { display: block; width: 100%; color: var(--muted); font-size: 12px; }
 .profile-fields select, .profile-fields input { margin-top: 6px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); padding: 11px; color: var(--ink); }
+.planner-field { display: block; margin-top: 18px; color: var(--ink); font-size: 13px; font-weight: 700; }
+.planner-field textarea { display: block; width: 100%; margin-top: 7px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); padding: 11px; color: var(--ink); font: inherit; font-weight: 400; resize: vertical; }
+.planner-field small { display: block; margin-top: 6px; color: var(--muted); font-size: 11px; font-weight: 400; line-height: 1.5; }
 .muscle-picker { display: flex; align-items: center; gap: 14px; margin: 20px 0; border: 1px solid #dce9c0; border-radius: 11px; background: #fbfdf3; padding: 15px; }
 .muscle-picker h3, .location-card h3, .umkm-card h3 { margin: 0; font: 600 15px 'Space Grotesk', sans-serif; }
 .muscle-picker p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
@@ -350,6 +358,7 @@ footer span { padding: 0 5px; color: var(--coral); }
 .equipment-option input { flex: 0 0 auto; accent-color: var(--green); }
 .kitchen-tools { margin-top: 28px; }
 .field-hint { margin: 12px 0; line-height: 1.5; }
+.bmi-summary { margin: 0 0 18px; border: 1px solid #dce9df; border-radius: 10px; background: #f2f8f2; padding: 13px 15px; color: var(--green-dark); font-size: 13px; line-height: 1.55; }
 .wizard-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 26px; }
 .membership-inline { margin: 20px 0; border-radius: 11px; background: var(--mint); padding: 16px; }
 .membership-inline h3 { margin: 0; color: var(--green-dark); font: 600 19px 'Space Grotesk', sans-serif; }

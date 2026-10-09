@@ -6,7 +6,7 @@
         <div>
             <p class="eyebrow">SMART MEAL PLANNER</p>
             <h1>Plan meals that fit <span>your training.</span></h1>
-            <p class="hero-copy">Pilih olahraga, perlengkapan dapur, dan anggaran untuk menyusun menu serta menemukan UMKM kuliner yang sesuai.</p>
+            <p class="hero-copy">Pilih program, perlengkapan dapur, dan anggaran untuk menyusun menu serta menemukan UMKM kuliner yang sesuai.</p>
         </div>
         <div class="hero-badge"><span>●</span> Nutrisi sesuai cabang olahraga</div>
     </section>
@@ -27,10 +27,11 @@
         <div class="card-title"><span class="step">01</span><div><h2>Profil latihan & penyedia makanan</h2><p>Target kalori dan karbohidrat mengikuti kebutuhan cabang olahraga Anda.</p></div></div>
 
         <fieldset class="sport-options">
-            <legend>Pilih cabang olahraga</legend>
+            <legend>Pilih olahraga atau program makan</legend>
             <label class="sport-option"><input type="radio" name="sport" value="binaraga" checked><span class="sport-icon" aria-hidden="true">🏋</span><span><b>Binaraga</b><small>Dukungan energi dan protein untuk latihan beban.</small></span></label>
             <label class="sport-option"><input type="radio" name="sport" value="cycling"><span class="sport-icon" aria-hidden="true">🚴</span><span><b>Cycling</b><small>Fokus karbohidrat untuk aktivitas bersepeda.</small></span></label>
             <label class="sport-option"><input type="radio" name="sport" value="runner"><span class="sport-icon" aria-hidden="true">🏃</span><span><b>Runner</b><small>Energi seimbang untuk lari dan pemulihan.</small></span></label>
+            <label class="sport-option"><input type="radio" name="sport" value="normal"><span class="sport-icon" aria-hidden="true">🌿</span><span><b>Aktivitas normal</b><small>Tidak mengikuti olahraga atau program makan khusus.</small></span></label>
         </fieldset>
 
         <div id="musclePicker" class="muscle-picker" hidden>
@@ -42,22 +43,24 @@
         <div class="profile-fields">
             <label>Jenis kelamin untuk estimasi metabolisme<select id="sex"><option value="female">Perempuan</option><option value="male">Laki-laki</option></select></label>
             <label>Berat badan (kg)<input id="weight" type="number" min="20" max="300" step=".1" value="60" required></label>
-            <label>Usia<input id="age" type="number" min="13" max="100" value="25" required></label>
+            <label>Usia (tahun; desimal untuk remaja)<input id="age" type="number" min="13" max="100" step=".1" value="25" required></label>
             <label>Tinggi badan (cm)<input id="height" type="number" min="100" max="230" step=".1" value="165" required></label>
         </div>
-        <p class="field-hint">Target kalori dan makro merupakan estimasi umum berdasarkan profil tubuh dan olahraga, bukan saran medis.</p>
+        <label class="planner-field">Makanan atau bahan yang tidak bisa dikonsumsi<textarea id="excludedFoods" rows="3" maxlength="1000" placeholder="Contoh: udang, susu, kacang tanah"></textarea><small>Pisahkan dengan koma atau baris baru. Bahan yang cocok akan dikeluarkan dari daftar belanja dan resep. Untuk alergi serius, tetap periksa label produk dan risiko kontaminasi silang.</small></label>
+        <p class="field-hint">BMI digunakan sebagai skrining umum, bukan diagnosis. Usia 13–18 memakai kurva BMI-menurut-umur WHO 2007; usia 19+ memakai ambang BMI dewasa. Binaraga dikecualikan dari otomasi BMI. Diet penurunan berat untuk dewasa memakai defisit ringan; remaja tidak diberi target defisit kalori. Konsultasikan tenaga kesehatan untuk kebutuhan khusus.</p>
 
         <article class="planner-card location-card">
             <div class="card-title"><span class="step">A</span><div><h3>Supermarket & toko bahan</h3><p>Pilih toko untuk daftar belanja plan Anda.</p></div></div>
             <div class="location-actions"><button id="locateButton" class="planner-button primary" type="button">Gunakan lokasi saat ini</button><span id="locationStatus" class="location-status">Lokasi belum diatur</span></div>
+            <p class="field-hint">Produk mengikuti katalog referensi workbook. Variasi merek dan harga di luar toko sumber adalah simulasi pembanding; harga promo dan ketersediaan dapat berubah. Verifikasi ke cabang sebelum belanja.</p>
             <div class="coordinates"><label>Latitude<input id="lat" type="number" step="any" value="-7.282356"></label><label>Longitude<input id="lng" type="number" step="any" value="112.794925"></label></div>
             <button id="searchButton" class="planner-button secondary" type="button">Cari toko terdekat</button>
             <div id="storesPanel" class="stores-panel" hidden><p id="storeCount" class="panel-hint">Toko di sekitar Anda</p><div id="storeList" class="store-list"></div></div>
         </article>
 
         <article class="planner-card umkm-card">
-            <div class="card-title"><span class="step">B</span><div><h3>Menu UMKM untuk olahraga Anda</h3><p>Temukan hidangan siap santap dari usaha kuliner lokal.</p></div></div>
-            <div id="umkmList" class="umkm-list" aria-live="polite"><p class="empty-state">Pilih cabang olahraga untuk melihat menu UMKM yang sesuai.</p></div>
+            <div class="card-title"><span class="step">B</span><div><h3>Menu UMKM sesuai pilihan Anda</h3><p>Temukan hidangan siap santap dari usaha kuliner lokal.</p></div></div>
+            <div id="umkmList" class="umkm-list" aria-live="polite"><p class="empty-state">Pilih program untuk melihat menu UMKM yang sesuai.</p></div>
         </article>
 
         <div class="wizard-actions"><span></span><button class="planner-button primary" type="button" data-next-step="equipment">Lanjut: pilih peralatan</button></div>
@@ -96,9 +99,12 @@
 
     <section id="planPanel" class="planner-card wizard-step" data-step="results" hidden>
         <div class="card-title"><span class="step">04</span><div><h2>Hasil meal plan Anda</h2><p id="planType">Daily plan</p></div></div>
+        <p id="bmiSummary" class="bmi-summary" role="status"></p>
         <div class="plan-summary">
-            <div><small>Total belanja</small><strong id="totalCost">Rp 0</strong></div>
-            <div><small>Sisa anggaran</small><strong id="remainingBudget">Rp 0</strong></div>
+            <div><small>Anggaran per hari</small><strong id="dailyBudget">Rp 0</strong></div>
+            <div><small>Anggaran seluruh plan</small><strong id="totalBudget">Rp 0</strong></div>
+            <div><small>Total belanja seluruh plan</small><strong id="totalCost">Rp 0</strong></div>
+            <div><small>Sisa anggaran seluruh plan</small><strong id="remainingBudget">Rp 0</strong></div>
             <div><small>Kalori plan / hari</small><strong id="totalCalories">0 kcal</strong></div>
             <div><small>Target karbohidrat / hari</small><strong id="maxCarbs">Belum diatur</strong></div>
         </div>

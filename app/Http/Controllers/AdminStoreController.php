@@ -16,7 +16,7 @@ class AdminStoreController extends Controller
 
     public function create()
     {
-        return view('admin.stores.form', ['store' => new Store()]);
+        return view('admin.stores.form', ['store' => new Store]);
     }
 
     public function store(Request $request)
@@ -60,7 +60,7 @@ class AdminStoreController extends Controller
 
     public function createProduct(Store $store)
     {
-        return view('admin.stores.product-form', ['store' => $store, 'product' => new StoreProduct()]);
+        return view('admin.stores.product-form', ['store' => $store, 'product' => new StoreProduct]);
     }
 
     public function storeProduct(Request $request, Store $store)
@@ -76,6 +76,7 @@ class AdminStoreController extends Controller
     public function editProduct(Store $store, StoreProduct $product)
     {
         abort_unless($product->store_id === $store->id, 404);
+
         return view('admin.stores.product-form', compact('store', 'product'));
     }
 
@@ -116,8 +117,14 @@ class AdminStoreController extends Controller
     {
         return $request->validate([
             'product_name' => ['required', 'string', 'max:120'],
+            'brand' => ['nullable', 'string', 'max:120'],
+            'package' => ['nullable', 'string', 'max:80'],
+            'subcategory' => ['nullable', 'string', 'max:80'],
+            'reference_sku' => ['nullable', 'string', 'max:40'],
+            'catalog_category' => ['nullable', 'string', 'max:120'],
+            'reference_source' => ['nullable', 'string', 'max:80'],
             'price' => ['required', 'numeric', 'min:0'],
-            'category' => ['required', 'in:Karbohidrat,Protein,Sayuran'],
+            'category' => ['required', 'in:Karbohidrat,Protein,Sayuran,Lainnya'],
             'is_available' => ['nullable', 'boolean'],
             'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
         ]) + ['is_available' => $request->boolean('is_available')];

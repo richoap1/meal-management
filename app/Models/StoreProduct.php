@@ -9,6 +9,12 @@ class StoreProduct extends Model
     protected $fillable = [
         'store_id',
         'product_name',
+        'reference_sku',
+        'catalog_category',
+        'reference_source',
+        'brand',
+        'package',
+        'subcategory',
         'price',
         'category',
         'image_path',

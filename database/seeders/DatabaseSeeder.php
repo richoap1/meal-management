@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Database\Seeder;
 use App\Models\Store;
-use App\Models\StoreProduct;
 use App\Models\User;
+use App\Services\PlannerProductCategory;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use RuntimeException;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,17 +17,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-    User::create([
+        User::updateOrCreate(['email' => 'admin@planner.com'], [
             'name' => 'Administrator',
-            'email' => 'admin@planner.com',
             'password' => Hash::make('admin123'),
             'role' => 'admin',
         ]);
 
-        // Dummy User Biasa
-        User::create([
+        User::updateOrCreate(['email' => 'user@planner.com'], [
             'name' => 'Regular User',
-            'email' => 'user@planner.com',
             'password' => Hash::make('user123'),
             'role' => 'user',
         ]);
@@ -44,7 +42,7 @@ class DatabaseSeeder extends Seeder
                 'longitude' => 112.677519,
             ],
             [
-                'name' => "Transmart rungkut (Timur)",
+                'name' => 'Transmart rungkut (Timur)',
                 'address' => 'Jl. Raya Kalirungkut No.23-25, Kali Rungkut, Surabaya',
                 'latitude' => -7.319545,
                 'longitude' => 112.768875,
@@ -54,72 +52,68 @@ class DatabaseSeeder extends Seeder
                 'address' => 'Jl. Raya Margerejo Indah No. 60-68, Margorejo, Surabaya',
                 'latitude' => -7.315278,
                 'longitude' => 112.738611,
-            ]
+            ],
         ];
 
+        $catalogPath = database_path('seeders/data/store-products.json');
+        if (! is_file($catalogPath)) {
+            throw new RuntimeException('The bundled store product catalog could not be found.');
+        }
+
+        $catalog = json_decode(file_get_contents($catalogPath), true, flags: JSON_THROW_ON_ERROR);
+        $categoryResolver = app(PlannerProductCategory::class);
+
         foreach ($stores as $storeData) {
-            $store = Store::create($storeData);
-            $this->seedProducts($store->id);
+            $store = Store::updateOrCreate(['name' => $storeData['name']], $storeData);
+            $this->seedProducts($store, $catalog, $categoryResolver);
         }
     }
 
-    private function seedProducts($storeId)
+    private function seedProducts(Store $store, array $catalog, PlannerProductCategory $categoryResolver): void
     {
-        $priceMod = rand(-2000,3000);
+        $storeName = mb_strtolower($store->name);
+        $storeKey = match (true) {
+            str_contains($storeName, 'superindo') => 'super_indo',
+            str_contains($storeName, 'hokky') => 'hokky',
+            str_contains($storeName, 'transmart') => 'transmart',
+            str_contains($storeName, 'papaya') => 'papaya',
+            default => throw new RuntimeException("No reference catalog pricing strategy is configured for {$store->name}."),
+        };
+        $priceFactors = ['super_indo' => 1.12, 'hokky' => 1.20, 'transmart' => 1.35, 'papaya' => 1.50];
+        $priceOffsets = ['super_indo' => 0, 'hokky' => 100, 'transmart' => 200, 'papaya' => 300];
+        $brandPrefixes = ['super_indo' => 'Super Indo', 'hokky' => 'Hokky', 'transmart' => 'Transmart', 'papaya' => 'Papaya'];
 
-        $products = [
-            ['product_name' => 'Telur 1kg', 'price' => 25000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Dada Ayam 500g', 'price' => 30000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Beras 5kg', 'price' => 60000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Kentang 1kg', 'price' => 15000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Wortel 1kg', 'price' => 12000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Brokoli 500g', 'price' => 20000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
+        foreach (['super_indo', 'hokky'] as $source) {
+            foreach ($catalog[$source] as $referenceProduct) {
+                $isNativeStore = $storeKey === $source;
+                $product = [
+                    'product_name' => $referenceProduct['product_name'],
+                    'reference_sku' => $referenceProduct['sku'],
+                    'catalog_category' => $referenceProduct['catalog_category'],
+                    'reference_source' => $referenceProduct['reference_source'],
+                    'brand' => $isNativeStore
+                        ? $referenceProduct['brand']
+                        : $brandPrefixes[$storeKey].' '.$referenceProduct['brand'],
+                    'package' => $referenceProduct['package'],
+                    'subcategory' => $referenceProduct['subcategory'],
+                    'price' => $isNativeStore
+                        ? $referenceProduct['price']
+                        : ((int) round(($referenceProduct['price'] * $priceFactors[$storeKey]) / 100) * 100)
+                            + $priceOffsets[$storeKey],
+                    'category' => $categoryResolver->resolve(
+                        $referenceProduct['catalog_category'],
+                        $referenceProduct['subcategory'],
+                        $referenceProduct['product_name'],
+                        'Lainnya',
+                    ),
+                    'is_available' => true,
+                ];
 
-            ['product_name' => 'Ikan Salmon 500g', 'price' => 80000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Pasta 500g', 'price' => 25000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Bayam 1kg', 'price' => 10000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Daging Sapi 500g', 'price' => 70000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Jagung 1kg', 'price' => 15000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Kacang Panjang 1kg', 'price' => 12000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-
-            ['product_name' => 'Tahu 500g', 'price' => 10000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Roti Gandum 1 pack', 'price' => 20000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Selada 1 ikat', 'price' => 8000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Daging Ayam 1kg', 'price' => 40000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Ubi Jalar 1kg', 'price' => 15000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Kangkung 1 ikat', 'price' => 7000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Ikan Tuna 500g', 'price' => 60000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Jagung Manis 1kg', 'price' => 20000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Tomat 1kg', 'price' => 10000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-
-            ['product_name' => 'Daging Kambing 500g', 'price' => 75000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Bihun 500g', 'price' => 20000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Paprika 1kg', 'price' => 25000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Ikan Lele 500g', 'price' => 30000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Mie Instan 1 pack', 'price' => 3500, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Buncis 1kg', 'price' => 15000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Daging Bebek 500g', 'price' => 65000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Kentang Manis 1kg', 'price' => 18000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Terong 1kg', 'price' => 12000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Oat 500g', 'price' => 28000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Quinoa 500g', 'price' => 45000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Ubi Ungu 1kg', 'price' => 17000 + $priceMod, 'category' => 'Karbohidrat', 'is_available' => true],
-            ['product_name' => 'Udang 500g', 'price' => 50000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Tempe 500g', 'price' => 12000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Kacang Merah 500g', 'price' => 18000 + $priceMod, 'category' => 'Protein', 'is_available' => true],
-            ['product_name' => 'Mentimun 1kg', 'price' => 10000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Jamur Tiram 250g', 'price' => 14000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-            ['product_name' => 'Kol 1kg', 'price' => 11000 + $priceMod, 'category' => 'Sayuran', 'is_available' => true],
-        ];
-
-        foreach ($products as $product) {
-            StoreProduct::create([
-                'store_id' => $storeId,
-                'product_name' => $product['product_name'],
-                'price' => $product['price'],
-                'category' => $product['category'],
-                'is_available' => $product['is_available'],
-            ]);
+                $store->products()->updateOrCreate(
+                    ['reference_sku' => $referenceProduct['sku']],
+                    $product,
+                );
+            }
         }
     }
 }

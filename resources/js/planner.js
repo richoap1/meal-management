@@ -5,6 +5,7 @@ const state = {
     isSubscribed: false,
     latestPlan: null,
     umkmMenus: [],
+    umkmMessage: '',
     selectedMuscles: new Set(),
     highestStep: 0,
 };
@@ -141,6 +142,9 @@ async function findStores() {
 
 function renderUmkmMenus(menus, targetId) {
     const target = $(targetId);
+    const emptyMessage = state.umkmMessage || ($('excludedFoods').value.trim()
+        ? 'Menu UMKM tanpa informasi bahan atau yang mengandung pantangan tidak ditampilkan.'
+        : 'Belum ada menu UMKM yang terdaftar untuk pilihan ini. Admin dapat menambahkan menu melalui Recipe Library.');
     target.innerHTML = menus.length ? menus.map((menu) => `
         <article class="umkm-menu">
             <img src="${escapeHtml(menu.image_url)}" alt="${escapeHtml(menu.name)}" loading="lazy">
@@ -151,16 +155,27 @@ function renderUmkmMenus(menus, targetId) {
                 <strong>Rp ${Number(menu.price || 0).toLocaleString('id-ID')} · ${Number(menu.calories || 0).toLocaleString('id-ID')} kcal${menu.carbs === null ? '' : ` · ${Number(menu.carbs)} g karbo`}</strong>
                 <details><summary>Lihat menu</summary><p><b>Bahan:</b> ${escapeHtml((menu.ingredients || []).join(', ') || 'Informasi bahan belum tersedia')}</p><p><b>Menu:</b> ${escapeHtml((menu.instructions || []).join(' · ') || 'Silakan hubungi penjual untuk detail menu.')}</p></details>
             </div>
-        </article>`).join('') : '<p class="empty-state">Belum ada menu UMKM yang terdaftar untuk cabang olahraga ini. Admin dapat menambahkan menu melalui Recipe Library.</p>';
+        </article>`).join('') : `<p class="empty-state">${escapeHtml(emptyMessage)}</p>`;
 }
 
 async function loadUmkmMenus() {
     $('umkmList').innerHTML = '<p class="empty-state">Memuat menu UMKM...</p>';
     try {
-        const result = await request(`meal-prep/umkm-menus?sport=${encodeURIComponent(currentSport())}`);
+        const params = new URLSearchParams({ sport: currentSport() });
+        params.set('sex', $('sex').value);
+        params.set('weight', $('weight').value);
+        params.set('age', $('age').value);
+        params.set('height', $('height').value);
+        if ($('excludedFoods').value.trim()) {
+            params.set('excluded_foods', $('excludedFoods').value.trim());
+        }
+        const result = await request(`meal-prep/umkm-menus?${params.toString()}`);
         state.umkmMenus = result.data;
+        state.umkmMessage = result.message || '';
         renderUmkmMenus(state.umkmMenus, 'umkmList');
     } catch (error) {
+        state.umkmMenus = [];
+        state.umkmMessage = '';
         $('umkmList').innerHTML = '<p class="empty-state">Menu UMKM tidak dapat dimuat.</p>';
         showError(`Menu UMKM gagal dimuat: ${error.message}`);
     }
@@ -243,11 +258,25 @@ function renderPlan(result) {
     state.latestPlan = result;
     $('totalCost').textContent = `Rp ${Number(result.total_cost).toLocaleString('id-ID')}`;
     $('remainingBudget').textContent = `Rp ${Number(result.remaining_budget).toLocaleString('id-ID')}`;
+    $('dailyBudget').textContent = `Rp ${Number(result.daily_budget).toLocaleString('id-ID')}`;
+    $('totalBudget').textContent = `Rp ${Number(result.total_budget).toLocaleString('id-ID')}`;
     $('totalCalories').textContent = `${Number(result.daily_calories).toLocaleString('id-ID')} kcal`;
     $('maxCarbs').textContent = `${Number(result.max_carbs_per_day).toLocaleString('id-ID')} g`;
-    const sportLabels = { binaraga: 'Binaraga', cycling: 'Cycling', runner: 'Runner' };
+    const sportLabels = { binaraga: 'Binaraga', cycling: 'Cycling', runner: 'Runner', normal: 'Aktivitas normal' };
     const muscleDescription = result.muscle_groups.length ? ` · Fokus otot: ${result.muscle_groups.join(', ')}` : '';
-    $('planType').textContent = `${sportLabels[result.sport]} · target ${Number(result.recommended_calories).toLocaleString('id-ID')} kcal dan ${Number(result.protein_target).toLocaleString('id-ID')} g protein / hari${muscleDescription}`;
+    $('planType').textContent = `${sportLabels[result.sport]} · ${Object.keys(result.meal_plan).length} hari · anggaran Rp ${Number(result.daily_budget).toLocaleString('id-ID')} per hari · target ${Number(result.recommended_calories).toLocaleString('id-ID')} kcal dan ${Number(result.protein_target).toLocaleString('id-ID')} g protein / hari${muscleDescription}`;
+    const assessment = result.bmi_assessment;
+    const modeLabels = {
+        balanced: 'menu seimbang',
+        weight_management: 'diet pengelolaan berat dengan defisit ringan',
+        balanced_weight_management: 'menu seimbang untuk pengelolaan berat (tanpa defisit kalori khusus untuk remaja)',
+        balanced_weight_support: 'menu seimbang untuk dukungan berat badan',
+        sport_performance: 'mode performa binaraga (otomasi BMI dikecualikan)',
+    };
+    const bmiDescription = assessment.category === 'exempt'
+        ? assessment.label
+        : `BMI ${Number(assessment.value).toFixed(1)} · ${assessment.label} · acuan ${assessment.reference}`;
+    $('bmiSummary').textContent = `${bmiDescription}. Resep otomatis: ${modeLabels[result.nutrition_mode]}. Hasil BMI hanya skrining umum, bukan diagnosis.`;
     const equipmentLabels = {
         kompor: 'kompor & wajan',
         rice_cooker: 'rice cooker',
@@ -260,11 +289,22 @@ function renderPlan(result) {
         food_storage: 'wadah penyimpanan makanan',
     };
     $('equipmentSummary').textContent = `Peralatan yang dipilih: ${result.equipment.map((item) => equipmentLabels[item] || item).join(', ')}.`;
-    $('shoppingList').innerHTML = Object.entries(result.shopping_list)
-        .flatMap(([category, items]) => items.map((item) => `
-            <li class="product-item"><img src="${escapeHtml(item.image_url)}" alt="${escapeHtml(item.name)}" loading="lazy">
-                <span><b>${escapeHtml(item.name)}</b><small>${escapeHtml(item.package)} · ${escapeHtml(category)} · Rp ${Number(item.price).toLocaleString('id-ID')}</small></span>
-            </li>`)).join('') || '<li>Anggaran belum cukup untuk membeli bahan.</li>';
+    const dailyShoppingLists = result.daily_shopping_lists || {
+        [result.start_date]: {
+            budget: result.daily_budget,
+            total_cost: result.total_cost,
+            remaining_budget: result.remaining_budget,
+            items: result.shopping_list,
+        },
+    };
+    $('shoppingList').innerHTML = Object.entries(dailyShoppingLists).map(([day, shopping]) => `
+        <li class="shopping-day"><div class="shopping-day-heading"><b>${escapeHtml(day)}</b>
+            <small>Belanja Rp ${Number(shopping.total_cost).toLocaleString('id-ID')} · sisa Rp ${Number(shopping.remaining_budget).toLocaleString('id-ID')} dari Rp ${Number(shopping.budget).toLocaleString('id-ID')}</small></div>
+            <ul class="daily-shopping-products">${Object.entries(shopping.items).flatMap(([category, items]) => items.map((item) => `
+                <li class="product-item"><img src="${escapeHtml(item.image_url)}" alt="${escapeHtml(item.name)}" loading="lazy">
+                    <span><b>${escapeHtml(item.name)}</b><small>${escapeHtml(item.brand || 'Merek tidak dicantumkan')} · ${escapeHtml(item.package)} · ${escapeHtml(category)} · Rp ${Number(item.price).toLocaleString('id-ID')}</small></span>
+                </li>`)).join('')}</ul>
+        </li>`).join('') || '<li>Anggaran belum cukup untuk membeli bahan.</li>';
     $('mealPlan').innerHTML = Object.entries(result.meal_plan).map(([day, meals]) => `
         <div class="meal-day"><strong>${escapeHtml(day)}</strong>
             ${Object.entries(meals).map(([time, detail]) => typeof detail === 'string'
@@ -341,6 +381,7 @@ async function generatePlan() {
         advanceToStep('equipment');
         return;
     }
+    await loadUmkmMenus();
     $('generateButton').disabled = true;
     $('generateButton').textContent = 'Menyusun plan...';
     const body = {
@@ -353,6 +394,7 @@ async function generatePlan() {
         age: Number($('age').value),
         height: Number($('height').value),
         muscle_groups: [...state.selectedMuscles],
+        excluded_foods: $('excludedFoods').value,
         equipment: selectedEquipment(),
         start_date: $('startDate').value,
         end_date: $('endDate').value,
@@ -430,7 +472,15 @@ document.querySelectorAll('input[name="equipment"]').forEach((input) => input.ad
 document.querySelectorAll('#sex, #weight, #age, #height, #startDate, #endDate').forEach((input) => input.addEventListener('change', () => {
     state.latestPlan = null;
     state.highestStep = Math.min(state.highestStep, 2);
+    if (['sex', 'weight', 'age', 'height'].includes(input.id)) {
+        loadUmkmMenus();
+    }
 }));
+$('excludedFoods').addEventListener('input', () => {
+    state.latestPlan = null;
+    state.highestStep = Math.min(state.highestStep, 2);
+});
+$('excludedFoods').addEventListener('change', loadUmkmMenus);
 
 const today = todayAsDateInput();
 $('startDate').value = today;

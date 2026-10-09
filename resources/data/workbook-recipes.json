@@ -1,0 +1,1394 @@
+[
+    {
+        "id":  "diet-01",
+        "number":  1,
+        "title":  "Udang Segar Rebus dengan Kembang Kol",
+        "mode":  "Diet",
+        "calories":  347,
+        "carbs":  20,
+        "ingredients":  [
+                            "150g Udang Segar",
+                            "100g Kembang Kol (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Udang Segar dengan garam dan lada secukupnya.",
+                      "Rebus Udang Segar bersama dengan Kembang Kol selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-02",
+        "number":  2,
+        "title":  "Ikan (Fillet) Panggang dengan Kembang Kol",
+        "mode":  "Diet",
+        "calories":  246,
+        "carbs":  15,
+        "ingredients":  [
+                            "150g Ikan (Fillet)",
+                            "100g Kembang Kol (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Ikan (Fillet), masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Kembang Kol, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-03",
+        "number":  3,
+        "title":  "Daging Sapi Tenderloin Tumis Sehat dengan Brokoli Hijau",
+        "mode":  "Diet",
+        "calories":  310,
+        "carbs":  14,
+        "ingredients":  [
+                            "150g Daging Sapi Tenderloin",
+                            "100g Brokoli Hijau (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Daging Sapi Tenderloin, masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Brokoli Hijau, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-04",
+        "number":  4,
+        "title":  "Daging Sapi Tenderloin Kukus dengan Bayam",
+        "mode":  "Diet",
+        "calories":  290,
+        "carbs":  25,
+        "ingredients":  [
+                            "150g Daging Sapi Tenderloin",
+                            "100g Bayam (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Daging Sapi Tenderloin dengan garam dan lada secukupnya.",
+                      "Kukus Daging Sapi Tenderloin bersama dengan Bayam selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-05",
+        "number":  5,
+        "title":  "Udang Segar Rebus dengan Bayam",
+        "mode":  "Diet",
+        "calories":  227,
+        "carbs":  25,
+        "ingredients":  [
+                            "150g Udang Segar",
+                            "100g Bayam (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Udang Segar dengan garam dan lada secukupnya.",
+                      "Rebus Udang Segar bersama dengan Bayam selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-06",
+        "number":  6,
+        "title":  "Daging Sapi Sirloin Premium Kukus dengan Tomat Merah",
+        "mode":  "Diet",
+        "calories":  262,
+        "carbs":  13,
+        "ingredients":  [
+                            "150g Daging Sapi Sirloin Premium",
+                            "100g Tomat Merah (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Daging Sapi Sirloin Premium dengan garam dan lada secukupnya.",
+                      "Kukus Daging Sapi Sirloin Premium bersama dengan Tomat Merah selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-07",
+        "number":  7,
+        "title":  "Ikan (Fillet) Kukus dengan Wortel",
+        "mode":  "Diet",
+        "calories":  361,
+        "carbs":  8,
+        "ingredients":  [
+                            "150g Ikan (Fillet)",
+                            "100g Wortel (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Ikan (Fillet) dengan garam dan lada secukupnya.",
+                      "Kukus Ikan (Fillet) bersama dengan Wortel selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-08",
+        "number":  8,
+        "title":  "Daging Sapi Sirloin Premium Salad dengan Tomat Merah",
+        "mode":  "Diet",
+        "calories":  378,
+        "carbs":  24,
+        "ingredients":  [
+                            "150g Daging Sapi Sirloin Premium",
+                            "100g Tomat Merah (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Rebus Daging Sapi Sirloin Premium hingga matang penuh, lalu suwir atau potong dadu.",
+                      "Cuci bersih dan potong Tomat Merah ukuran sekali suap.",
+                      "Campurkan Daging Sapi Sirloin Premium dan Tomat Merah di dalam mangkuk besar.",
+                      "Tambahkan minyak zaitun, garam, dan perasan jeruk nipis.",
+                      "Aduk merata dan siap dinikmati segar."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-09",
+        "number":  9,
+        "title":  "Telur ayam negeri Tumis Sehat dengan Tomat Merah",
+        "mode":  "Diet",
+        "calories":  248,
+        "carbs":  12,
+        "ingredients":  [
+                            "150g Telur ayam negeri",
+                            "100g Tomat Merah (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Telur ayam negeri, masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Tomat Merah, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-10",
+        "number":  10,
+        "title":  "Daging Sapi Sirloin Premium Salad dengan Brokoli Hijau",
+        "mode":  "Diet",
+        "calories":  262,
+        "carbs":  17,
+        "ingredients":  [
+                            "150g Daging Sapi Sirloin Premium",
+                            "100g Brokoli Hijau (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Rebus Daging Sapi Sirloin Premium hingga matang penuh, lalu suwir atau potong dadu.",
+                      "Cuci bersih dan potong Brokoli Hijau ukuran sekali suap.",
+                      "Campurkan Daging Sapi Sirloin Premium dan Brokoli Hijau di dalam mangkuk besar.",
+                      "Tambahkan minyak zaitun, garam, dan perasan jeruk nipis.",
+                      "Aduk merata dan siap dinikmati segar."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-11",
+        "number":  11,
+        "title":  "Daging Sapi Tenderloin Tumis Sehat dengan Tomat Merah",
+        "mode":  "Diet",
+        "calories":  239,
+        "carbs":  21,
+        "ingredients":  [
+                            "150g Daging Sapi Tenderloin",
+                            "100g Tomat Merah (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Daging Sapi Tenderloin, masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Tomat Merah, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-12",
+        "number":  12,
+        "title":  "Ikan (Fillet) Panggang dengan Brokoli Hijau",
+        "mode":  "Diet",
+        "calories":  314,
+        "carbs":  5,
+        "ingredients":  [
+                            "150g Ikan (Fillet)",
+                            "100g Brokoli Hijau (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Ikan (Fillet), masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Brokoli Hijau, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-13",
+        "number":  13,
+        "title":  "Ikan (Fillet) Rebus dengan Wortel",
+        "mode":  "Diet",
+        "calories":  205,
+        "carbs":  25,
+        "ingredients":  [
+                            "150g Ikan (Fillet)",
+                            "100g Wortel (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Ikan (Fillet) dengan garam dan lada secukupnya.",
+                      "Rebus Ikan (Fillet) bersama dengan Wortel selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-14",
+        "number":  14,
+        "title":  "Daging Sapi Sirloin Premium Kukus dengan Kembang Kol",
+        "mode":  "Diet",
+        "calories":  262,
+        "carbs":  5,
+        "ingredients":  [
+                            "150g Daging Sapi Sirloin Premium",
+                            "100g Kembang Kol (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Daging Sapi Sirloin Premium dengan garam dan lada secukupnya.",
+                      "Kukus Daging Sapi Sirloin Premium bersama dengan Kembang Kol selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-15",
+        "number":  15,
+        "title":  "Daging Sapi Sirloin Premium Salad dengan Bayam",
+        "mode":  "Diet",
+        "calories":  245,
+        "carbs":  8,
+        "ingredients":  [
+                            "150g Daging Sapi Sirloin Premium",
+                            "100g Bayam (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Rebus Daging Sapi Sirloin Premium hingga matang penuh, lalu suwir atau potong dadu.",
+                      "Cuci bersih dan potong Bayam ukuran sekali suap.",
+                      "Campurkan Daging Sapi Sirloin Premium dan Bayam di dalam mangkuk besar.",
+                      "Tambahkan minyak zaitun, garam, dan perasan jeruk nipis.",
+                      "Aduk merata dan siap dinikmati segar."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-16",
+        "number":  16,
+        "title":  "Ikan (Fillet) Tumis Sehat dengan Tomat Merah",
+        "mode":  "Diet",
+        "calories":  296,
+        "carbs":  13,
+        "ingredients":  [
+                            "150g Ikan (Fillet)",
+                            "100g Tomat Merah (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Ikan (Fillet), masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Tomat Merah, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-17",
+        "number":  17,
+        "title":  "Udang Segar Rebus dengan Bayam",
+        "mode":  "Diet",
+        "calories":  214,
+        "carbs":  21,
+        "ingredients":  [
+                            "150g Udang Segar",
+                            "100g Bayam (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Udang Segar dengan garam dan lada secukupnya.",
+                      "Rebus Udang Segar bersama dengan Bayam selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-18",
+        "number":  18,
+        "title":  "Telur ayam negeri Kukus dengan Bayam",
+        "mode":  "Diet",
+        "calories":  323,
+        "carbs":  6,
+        "ingredients":  [
+                            "150g Telur ayam negeri",
+                            "100g Bayam (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Telur ayam negeri dengan garam dan lada secukupnya.",
+                      "Kukus Telur ayam negeri bersama dengan Bayam selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-19",
+        "number":  19,
+        "title":  "Telur ayam negeri Rebus dengan Wortel",
+        "mode":  "Diet",
+        "calories":  200,
+        "carbs":  23,
+        "ingredients":  [
+                            "150g Telur ayam negeri",
+                            "100g Wortel (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Telur ayam negeri dengan garam dan lada secukupnya.",
+                      "Rebus Telur ayam negeri bersama dengan Wortel selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-20",
+        "number":  20,
+        "title":  "Udang Segar Panggang dengan Tomat Merah",
+        "mode":  "Diet",
+        "calories":  201,
+        "carbs":  24,
+        "ingredients":  [
+                            "150g Udang Segar",
+                            "100g Tomat Merah (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Udang Segar, masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Tomat Merah, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-21",
+        "number":  21,
+        "title":  "Telur ayam negeri Kukus dengan Brokoli Hijau",
+        "mode":  "Diet",
+        "calories":  320,
+        "carbs":  21,
+        "ingredients":  [
+                            "150g Telur ayam negeri",
+                            "100g Brokoli Hijau (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Telur ayam negeri dengan garam dan lada secukupnya.",
+                      "Kukus Telur ayam negeri bersama dengan Brokoli Hijau selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-22",
+        "number":  22,
+        "title":  "Udang Segar Panggang dengan Bayam",
+        "mode":  "Diet",
+        "calories":  257,
+        "carbs":  9,
+        "ingredients":  [
+                            "150g Udang Segar",
+                            "100g Bayam (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Udang Segar, masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Bayam, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-23",
+        "number":  23,
+        "title":  "Telur ayam negeri Kukus dengan Kembang Kol",
+        "mode":  "Diet",
+        "calories":  315,
+        "carbs":  15,
+        "ingredients":  [
+                            "150g Telur ayam negeri",
+                            "100g Kembang Kol (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Telur ayam negeri dengan garam dan lada secukupnya.",
+                      "Kukus Telur ayam negeri bersama dengan Kembang Kol selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-24",
+        "number":  24,
+        "title":  "Daging Sapi Tenderloin Tumis Sehat dengan Kembang Kol",
+        "mode":  "Diet",
+        "calories":  314,
+        "carbs":  8,
+        "ingredients":  [
+                            "150g Daging Sapi Tenderloin",
+                            "100g Kembang Kol (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Panaskan wajan anti lengket, olesi dengan 1 sdt minyak.",
+                      "Masukkan bawang putih cincang, tumis hingga harum.",
+                      "Masukkan Daging Sapi Tenderloin, masak setiap sisinya hingga berubah warna dan matang.",
+                      "Masukkan Kembang Kol, beri sedikit air, dan tutup wajan sebentar agar sayur layu.",
+                      "Tambahkan garam, aduk rata, lalu angkat dan sajikan."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "diet-25",
+        "number":  25,
+        "title":  "Udang Segar Kukus dengan Kembang Kol",
+        "mode":  "Diet",
+        "calories":  223,
+        "carbs":  19,
+        "ingredients":  [
+                            "150g Udang Segar",
+                            "100g Kembang Kol (potong sesuai selera)",
+                            "1 sdt Minyak Zaitun / Minyak Wijen",
+                            "Garam meja secukupnya",
+                            "Merica dan bawang putih cincang secukupnya"
+                        ],
+        "equipment":  [
+                          "Panci / Teflon Anti Lengket",
+                          "Talenan \u0026 Pisau"
+                      ],
+        "steps":  [
+                      "Siapkan panci kukusan atau didihkan air di panci.",
+                      "Bumbui Udang Segar dengan garam dan lada secukupnya.",
+                      "Kukus Udang Segar bersama dengan Kembang Kol selama 15-20 menit hingga matang.",
+                      "Angkat dan tiriskan.",
+                      "Sajikan hangat dengan sedikit tetesan minyak wijen untuk aroma."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-01",
+        "number":  1,
+        "title":  "Buntut Sapi Katsu Goreng dengan Roti tawar",
+        "mode":  "Non-diet",
+        "calories":  726,
+        "carbs":  95,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Roti tawar",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Roti tawar sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Buntut Sapi dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Roti tawar yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-02",
+        "number":  2,
+        "title":  "Daging Sapi Giling Balado Mentega dengan Macaroni",
+        "mode":  "Non-diet",
+        "calories":  636,
+        "carbs":  108,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Macaroni",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Macaroni sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Daging Sapi Giling dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Macaroni, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-03",
+        "number":  3,
+        "title":  "Iga Sapi Goreng Mentega dengan Tepung Terigu Serbaguna",
+        "mode":  "Non-diet",
+        "calories":  769,
+        "carbs":  61,
+        "ingredients":  [
+                            "250g Iga Sapi",
+                            "150g Tepung Terigu Serbaguna",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Tepung Terigu Serbaguna sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Iga Sapi dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Tepung Terigu Serbaguna, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-04",
+        "number":  4,
+        "title":  "Daging Sapi Sirloin Premium Balado Mentega dengan Spaghetti No.5",
+        "mode":  "Non-diet",
+        "calories":  953,
+        "carbs":  104,
+        "ingredients":  [
+                            "250g Daging Sapi Sirloin Premium",
+                            "150g Spaghetti No.5",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Spaghetti No.5 sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Daging Sapi Sirloin Premium dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Spaghetti No.5, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-05",
+        "number":  5,
+        "title":  "Daging Sapi Giling Goreng Mentega dengan Tepung Terigu Serbaguna",
+        "mode":  "Non-diet",
+        "calories":  762,
+        "carbs":  53,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Tepung Terigu Serbaguna",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Tepung Terigu Serbaguna sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Daging Sapi Giling dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Tepung Terigu Serbaguna, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-06",
+        "number":  6,
+        "title":  "Buntut Sapi Katsu Goreng dengan Mie Telur Kering",
+        "mode":  "Non-diet",
+        "calories":  913,
+        "carbs":  58,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Mie Telur Kering",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Mie Telur Kering sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Buntut Sapi dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Mie Telur Kering yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-07",
+        "number":  7,
+        "title":  "Daging Sapi Giling Lumer Keju dengan Tepung Terigu Serbaguna",
+        "mode":  "Non-diet",
+        "calories":  924,
+        "carbs":  65,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Tepung Terigu Serbaguna",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Tepung Terigu Serbaguna sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin di wajan, tumis Daging Sapi Giling hingga kecoklatan dan matang.",
+                      "Tambahkan kecap manis, saus sambal, dan garam. Aduk hingga karamelisasi.",
+                      "Campurkan Tepung Terigu Serbaguna ke dalam tumisan, aduk merata dengan bumbu.",
+                      "Pindahkan ke piring saji, taburi keju mozzarella dengan tebal.",
+                      "Lelehkan keju dengan blow torch atau panggang sebentar di microwave. Sajikan hangat."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-08",
+        "number":  8,
+        "title":  "Iga Sapi Goreng Mentega dengan Spaghetti No.5",
+        "mode":  "Non-diet",
+        "calories":  665,
+        "carbs":  117,
+        "ingredients":  [
+                            "250g Iga Sapi",
+                            "150g Spaghetti No.5",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Spaghetti No.5 sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Iga Sapi dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Spaghetti No.5, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-09",
+        "number":  9,
+        "title":  "Buntut Sapi Goreng Tepung Krispi dengan Mie Telur Kering",
+        "mode":  "Non-diet",
+        "calories":  790,
+        "carbs":  60,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Mie Telur Kering",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Mie Telur Kering sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Buntut Sapi dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Mie Telur Kering yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-10",
+        "number":  10,
+        "title":  "Daging Sapi Giling Lumer Keju dengan Spaghetti No.5",
+        "mode":  "Non-diet",
+        "calories":  1057,
+        "carbs":  67,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Spaghetti No.5",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Spaghetti No.5 sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin di wajan, tumis Daging Sapi Giling hingga kecoklatan dan matang.",
+                      "Tambahkan kecap manis, saus sambal, dan garam. Aduk hingga karamelisasi.",
+                      "Campurkan Spaghetti No.5 ke dalam tumisan, aduk merata dengan bumbu.",
+                      "Pindahkan ke piring saji, taburi keju mozzarella dengan tebal.",
+                      "Lelehkan keju dengan blow torch atau panggang sebentar di microwave. Sajikan hangat."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-11",
+        "number":  11,
+        "title":  "Buntut Sapi Katsu Goreng dengan Tepung Terigu Serbaguna",
+        "mode":  "Non-diet",
+        "calories":  890,
+        "carbs":  67,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Tepung Terigu Serbaguna",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Tepung Terigu Serbaguna sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Buntut Sapi dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Tepung Terigu Serbaguna yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-12",
+        "number":  12,
+        "title":  "Buntut Sapi Goreng Mentega dengan Tepung Terigu Serbaguna",
+        "mode":  "Non-diet",
+        "calories":  607,
+        "carbs":  117,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Tepung Terigu Serbaguna",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Tepung Terigu Serbaguna sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Buntut Sapi dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Tepung Terigu Serbaguna, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-13",
+        "number":  13,
+        "title":  "Iga Sapi Goreng Mentega dengan Mie Telur Kering",
+        "mode":  "Non-diet",
+        "calories":  1013,
+        "carbs":  79,
+        "ingredients":  [
+                            "250g Iga Sapi",
+                            "150g Mie Telur Kering",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Mie Telur Kering sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Iga Sapi dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Mie Telur Kering, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-14",
+        "number":  14,
+        "title":  "Sosis sapi/ayam Lumer Keju dengan Spaghetti No.5",
+        "mode":  "Non-diet",
+        "calories":  1052,
+        "carbs":  69,
+        "ingredients":  [
+                            "250g Sosis sapi/ayam",
+                            "150g Spaghetti No.5",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Spaghetti No.5 sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin di wajan, tumis Sosis sapi/ayam hingga kecoklatan dan matang.",
+                      "Tambahkan kecap manis, saus sambal, dan garam. Aduk hingga karamelisasi.",
+                      "Campurkan Spaghetti No.5 ke dalam tumisan, aduk merata dengan bumbu.",
+                      "Pindahkan ke piring saji, taburi keju mozzarella dengan tebal.",
+                      "Lelehkan keju dengan blow torch atau panggang sebentar di microwave. Sajikan hangat."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-15",
+        "number":  15,
+        "title":  "Sosis sapi/ayam Balado Mentega dengan Macaroni",
+        "mode":  "Non-diet",
+        "calories":  865,
+        "carbs":  106,
+        "ingredients":  [
+                            "250g Sosis sapi/ayam",
+                            "150g Macaroni",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Macaroni sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Sosis sapi/ayam dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Macaroni, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-16",
+        "number":  16,
+        "title":  "Sosis sapi/ayam Katsu Goreng dengan Spaghetti No.5",
+        "mode":  "Non-diet",
+        "calories":  1057,
+        "carbs":  90,
+        "ingredients":  [
+                            "250g Sosis sapi/ayam",
+                            "150g Spaghetti No.5",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Spaghetti No.5 sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Sosis sapi/ayam dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Spaghetti No.5 yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-17",
+        "number":  17,
+        "title":  "Buntut Sapi Katsu Goreng dengan Roti tawar",
+        "mode":  "Non-diet",
+        "calories":  762,
+        "carbs":  74,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Roti tawar",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Roti tawar sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Buntut Sapi dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Roti tawar yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-18",
+        "number":  18,
+        "title":  "Daging Sapi Giling Goreng Mentega dengan Roti tawar",
+        "mode":  "Non-diet",
+        "calories":  790,
+        "carbs":  75,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Roti tawar",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Roti tawar sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Daging Sapi Giling dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Roti tawar, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-19",
+        "number":  19,
+        "title":  "Daging Sapi Giling Balado Mentega dengan Macaroni",
+        "mode":  "Non-diet",
+        "calories":  963,
+        "carbs":  64,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Macaroni",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Macaroni sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Daging Sapi Giling dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Macaroni, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-20",
+        "number":  20,
+        "title":  "Sosis sapi/ayam Balado Mentega dengan Spaghetti No.5",
+        "mode":  "Non-diet",
+        "calories":  992,
+        "carbs":  90,
+        "ingredients":  [
+                            "250g Sosis sapi/ayam",
+                            "150g Spaghetti No.5",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Spaghetti No.5 sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Sosis sapi/ayam dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Spaghetti No.5, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-21",
+        "number":  21,
+        "title":  "Daging Sapi Giling Goreng Mentega dengan Mie Telur Kering",
+        "mode":  "Non-diet",
+        "calories":  616,
+        "carbs":  72,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Mie Telur Kering",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Mie Telur Kering sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin dalam jumlah agak banyak di wajan hingga meleleh sempurna.",
+                      "Goreng atau tumis Daging Sapi Giling dengan margarin hingga tingkat kematangan yang diinginkan.",
+                      "Masukkan Mie Telur Kering, tuangkan kecap manis dan saus sambal.",
+                      "Aduk dengan cepat di atas api besar agar bumbu meresap merata.",
+                      "Beri taburan keju (jika suka) dan hidangkan segera."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-22",
+        "number":  22,
+        "title":  "Iga Sapi Goreng Tepung Krispi dengan Roti tawar",
+        "mode":  "Non-diet",
+        "calories":  690,
+        "carbs":  104,
+        "ingredients":  [
+                            "250g Iga Sapi",
+                            "150g Roti tawar",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Roti tawar sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Iga Sapi dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Roti tawar yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-23",
+        "number":  23,
+        "title":  "Buntut Sapi Goreng Tepung Krispi dengan Tepung Terigu Serbaguna",
+        "mode":  "Non-diet",
+        "calories":  932,
+        "carbs":  115,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Tepung Terigu Serbaguna",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Tepung Terigu Serbaguna sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Lumuri Buntut Sapi dengan garam dan balur dengan tepung terigu secukupnya.",
+                      "Goreng dalam minyak/margarin panas (deep fry) hingga kuning keemasan dan krispi.",
+                      "Angkat dan tiriskan dari sisa minyak berlebih.",
+                      "Sajikan bersama Tepung Terigu Serbaguna yang sudah disiapkan, siram dengan saus sambal asli."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-24",
+        "number":  24,
+        "title":  "Buntut Sapi Lumer Keju dengan Tepung Terigu Serbaguna",
+        "mode":  "Non-diet",
+        "calories":  868,
+        "carbs":  53,
+        "ingredients":  [
+                            "250g Buntut Sapi",
+                            "150g Tepung Terigu Serbaguna",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Tepung Terigu Serbaguna sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin di wajan, tumis Buntut Sapi hingga kecoklatan dan matang.",
+                      "Tambahkan kecap manis, saus sambal, dan garam. Aduk hingga karamelisasi.",
+                      "Campurkan Tepung Terigu Serbaguna ke dalam tumisan, aduk merata dengan bumbu.",
+                      "Pindahkan ke piring saji, taburi keju mozzarella dengan tebal.",
+                      "Lelehkan keju dengan blow torch atau panggang sebentar di microwave. Sajikan hangat."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    },
+    {
+        "id":  "nondiet-25",
+        "number":  25,
+        "title":  "Daging Sapi Giling Lumer Keju dengan Spaghetti No.5",
+        "mode":  "Non-diet",
+        "calories":  970,
+        "carbs":  84,
+        "ingredients":  [
+                            "250g Daging Sapi Giling",
+                            "150g Spaghetti No.5",
+                            "3 sdm Margarin Serbaguna",
+                            "Keju Mozzarella Shredded (secukupnya)",
+                            "Saus Sambal Asli \u0026 Kecap Manis",
+                            "Garam meja secukupnya"
+                        ],
+        "equipment":  [
+                          "Wajan Penggorengan (Wok) / Panci",
+                          "Spatula \u0026 Saringan"
+                      ],
+        "steps":  [
+                      "Rebus atau siapkan Spaghetti No.5 sesuai petunjuk hingga matang/al dente, sisihkan.",
+                      "Panaskan margarin di wajan, tumis Daging Sapi Giling hingga kecoklatan dan matang.",
+                      "Tambahkan kecap manis, saus sambal, dan garam. Aduk hingga karamelisasi.",
+                      "Campurkan Spaghetti No.5 ke dalam tumisan, aduk merata dengan bumbu.",
+                      "Pindahkan ke piring saji, taburi keju mozzarella dengan tebal.",
+                      "Lelehkan keju dengan blow torch atau panggang sebentar di microwave. Sajikan hangat."
+                  ],
+        "source":  "Super Indo \u0026 Hokky workbook recipes"
+    }
+]

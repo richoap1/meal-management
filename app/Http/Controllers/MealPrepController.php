@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Meal;
 use App\Models\StoreProduct;
+use App\Services\BodyMassIndexAssessment;
+use App\Services\PlannerProductCategory;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
-use Carbon\Carbon;
 
 class MealPrepController extends Controller
 {
@@ -38,25 +40,26 @@ class MealPrepController extends Controller
         return response()->json(['status' => 'success']);
     }
 
-    public function generatePlan(Request $request)
+    public function generatePlan(Request $request, BodyMassIndexAssessment $bmiAssessment, PlannerProductCategory $productCategory)
     {
         $data = $request->validate([
             'store_id' => 'required|exists:stores,id',
             'budget' => 'required|numeric|min:25000|max:1000000',
             'is_subscribed' => 'nullable|boolean',
-            'sport' => 'required|in:binaraga,cycling,runner',
+            'sport' => 'required|in:binaraga,cycling,runner,normal',
             'weight' => 'required|numeric|min:20|max:300',
-            'age' => 'required|integer|min:13|max:100',
+            'age' => 'required|numeric|min:13|max:100',
             'height' => 'required|numeric|min:100|max:230',
             'sex' => 'required|in:male,female',
-            'muscle_groups' => 'required_if:sport,binaraga|array|min:1',
+            'muscle_groups' => 'exclude_unless:sport,binaraga|required|array|min:1',
             'muscle_groups.*' => 'in:Dada,Bahu,Lengan,Perut,Punggung,Glutes,Kaki',
             'equipment' => 'required|array|min:1',
             'equipment.*' => 'in:kompor,rice_cooker,oven,air_fryer,steamer,blender,knife,measuring_tools,food_storage',
+            'excluded_foods' => 'nullable|string|max:1000',
             'start_date' => 'required|date',
             'end_date' => 'required_if:is_subscribed,1|nullable|date|after_or_equal:start_date',
         ]);
-        if (!array_intersect($data['equipment'], ['kompor', 'rice_cooker', 'oven', 'air_fryer', 'steamer'])) {
+        if (! array_intersect($data['equipment'], ['kompor', 'rice_cooker', 'oven', 'air_fryer', 'steamer'])) {
             throw ValidationException::withMessages([
                 'equipment' => 'Pilih minimal satu alat masak utama yang tersedia di rumah.',
             ]);
@@ -67,75 +70,160 @@ class MealPrepController extends Controller
         $endDate = $isSubscribed ? Carbon::parse($data['end_date'] ?? $data['start_date'])->startOfDay() : $startDate->copy();
         $calendarDays = $startDate->diff($endDate)->days + 1;
         $days = $isSubscribed ? $calendarDays : 1;
+        $bmi = $bmiAssessment->assess(
+            (float) $data['weight'],
+            (float) $data['age'],
+            (float) $data['height'],
+            $data['sex'],
+            $data['sport'],
+        );
         $bmr = (10 * $data['weight']) + (6.25 * $data['height']) - (5 * $data['age']) + ($data['sex'] === 'male' ? 5 : -161);
         $activityFactor = match ($data['sport']) {
             'binaraga' => 1.55,
             'cycling' => 1.725,
             'runner' => 1.65,
+            'normal' => 1.2,
         };
-        $dailyCalories = (int) round($bmr * $activityFactor);
+        $maintenanceCalories = (int) round($bmr * $activityFactor);
+        $calorieAdjustment = match ($bmi['nutrition_mode']) {
+            'weight_management' => 0.9,
+            'balanced_weight_support' => $bmi['age_group'] === 'adult' ? 1.05 : 1,
+            default => 1,
+        };
+        $dailyCalories = (int) round($maintenanceCalories * $calorieAdjustment);
         $carbohydrateRatio = match ($data['sport']) {
             'binaraga' => .45,
             'cycling' => .60,
             'runner' => .55,
+            'normal' => .50,
         };
         $proteinRatio = match ($data['sport']) {
-            'binaraga' => .30,
+            'binaraga' => .35,
             'cycling' => .15,
             'runner' => .20,
+            'normal' => .20,
         };
         $maxCarbs = (int) round(($dailyCalories * $carbohydrateRatio) / 4);
         $proteinTarget = (int) round(($dailyCalories * $proteinRatio) / 4);
         $inventory = ['Karbohidrat' => [], 'Protein' => [], 'Sayuran' => []];
         $totalCost = 0;
-        $nutrition = ['Karbohidrat' => ['calories' => 250, 'carbs' => 45], 'Protein' => ['calories' => 220, 'carbs' => 3], 'Sayuran' => ['calories' => 80, 'carbs' => 12]];
-        $itemsByCategory = collect(['Karbohidrat', 'Protein', 'Sayuran'])->mapWithKeys(fn ($category) => [$category => StoreProduct::where('store_id', $data['store_id'])->where('category', $category)->where('is_available', true)->get()]);
+        $nutrition = match ($bmi['nutrition_mode']) {
+            'weight_management' => ['Karbohidrat' => ['calories' => 190, 'carbs' => 35], 'Protein' => ['calories' => 220, 'carbs' => 3], 'Sayuran' => ['calories' => 120, 'carbs' => 18]],
+            'balanced_weight_support' => ['Karbohidrat' => ['calories' => 290, 'carbs' => 52], 'Protein' => ['calories' => 250, 'carbs' => 3], 'Sayuran' => ['calories' => 80, 'carbs' => 12]],
+            default => ['Karbohidrat' => ['calories' => 250, 'carbs' => 45], 'Protein' => ['calories' => 220, 'carbs' => 3], 'Sayuran' => ['calories' => 80, 'carbs' => 12]],
+        };
+        $excludedTerms = $this->excludedFoodTerms($data['excluded_foods'] ?? '');
+        $availableProducts = StoreProduct::where('store_id', $data['store_id'])
+            ->where('is_available', true)
+            ->get()
+            ->reject(fn (StoreProduct $product) => $this->isExcludedFood($product, $excludedTerms))
+            ->filter(fn (StoreProduct $product) => $product->price <= $data['budget']);
+        $itemsByCategory = collect(array_keys($inventory))->mapWithKeys(fn (string $category) => [
+            $category => $availableProducts
+                ->filter(fn (StoreProduct $product) => $productCategory->resolve(
+                    $product->catalog_category ?? '',
+                    $product->subcategory ?? '',
+                    $product->product_name,
+                    $product->category,
+                ) === $category)
+                ->filter(fn (StoreProduct $product) => $category !== 'Karbohidrat' || $this->canCookCarbohydrate($product, $data['equipment']))
+                ->sortBy('price')
+                ->values(),
+        ]);
         $buyTarget = $isSubscribed
-            ? min(6, max(3, (int) floor($data['budget'] / 150000)))
-            : min(4, max(2, (int) floor($data['budget'] / 60000)));
+            ? min(6, max(3, (int) floor($data['budget'] / 50000)))
+            : min(6, max(3, (int) floor($data['budget'] / 50000)));
 
-        foreach ($itemsByCategory as $category => $items) {
-            $availableItems = $items
-                ->filter(fn ($item) => $item->price <= $data['budget'])
-                ->shuffle()
-                ->values();
-            foreach ($availableItems->take($buyTarget) as $item) {
-                if ($totalCost + $item->price > $data['budget']) continue;
+        $mealPlan = [];
+        $dailyShoppingLists = [];
+        $mealTypes = ['Breakfast', 'Lunch', 'Dinner'];
+        $totalCost = 0;
+        $totalCalories = 0;
+        $totalCarbs = 0;
+        for ($day = 1; $day <= $days; $day++) {
+            $dateLabel = $startDate->copy()->addDays($day - 1)->format('D, d M Y');
+            $inventory = ['Karbohidrat' => [], 'Protein' => [], 'Sayuran' => []];
+            $dayTotalCost = 0;
+            $selectedProductIds = [];
+            $addProduct = function (StoreProduct $product, string $category) use (&$inventory, &$dayTotalCost, &$selectedProductIds, $nutrition): void {
                 $inventory[$category][] = [
-                    'name' => $item->product_name,
-                    'package' => $this->packageLabel($category, $item->product_name),
-                    'price' => (float) $item->price,
+                    'name' => $product->product_name,
+                    'brand' => $product->brand,
+                    'package' => $product->package ?: $this->packageLabel($category, $product->product_name),
+                    'price' => (float) $product->price,
                     'image_url' => $this->productImage($category),
                     'calories' => $nutrition[$category]['calories'],
                     'carbs' => $nutrition[$category]['carbs'],
                 ];
-                $totalCost += $item->price;
-            }
-        }
+                $dayTotalCost += $product->price;
+                $selectedProductIds[] = $product->id;
+            };
 
-        $mealPlan = [];
-        $mealTypes = ['Breakfast', 'Lunch', 'Dinner'];
-        $dailyPlanCalories = 0;
-        $dailyPlanCarbs = 0;
-        $shuffledInventory = collect($inventory)->map(fn ($items) => collect($items)->shuffle());
-        $mealIndex = 0;
-        $usedRecipes = ['Breakfast' => [], 'Lunch' => [], 'Dinner' => []];
-        for ($day = 1; $day <= $days; $day++) {
-            $dateLabel = $startDate->copy()->addDays($day - 1)->format('D, d M Y');
+            foreach ($itemsByCategory as $category => $items) {
+                $cheapestItem = $items->first();
+                if ($cheapestItem && $dayTotalCost + $cheapestItem->price <= $data['budget']) {
+                    $addProduct($cheapestItem, $category);
+                }
+            }
+
+            do {
+                $addedProduct = false;
+                foreach ($itemsByCategory as $category => $items) {
+                    if (count($inventory[$category]) >= $buyTarget || $items->isEmpty()) {
+                        continue;
+                    }
+
+                    $rotationOffset = ($day - 1) % $items->count();
+                    $rotatedItems = $items->slice($rotationOffset)->concat($items->take($rotationOffset));
+                    $nextItem = $rotatedItems->first(fn (StoreProduct $product) => ! in_array($product->id, $selectedProductIds, true)
+                        && $dayTotalCost + $product->price <= $data['budget']);
+                    if ($nextItem) {
+                        $addProduct($nextItem, $category);
+                        $addedProduct = true;
+                    }
+                }
+            } while ($addedProduct);
+
+            $dailyShoppingLists[$dateLabel] = [
+                'budget' => (float) $data['budget'],
+                'total_cost' => $dayTotalCost,
+                'remaining_budget' => $data['budget'] - $dayTotalCost,
+                'items' => $inventory,
+            ];
+            $totalCost += $dayTotalCost;
+
+            $shuffledInventory = collect($inventory)->map(fn ($items) => collect($items)->shuffle());
+            $categoryNames = array_keys($inventory);
+            $selectionStrides = [];
+            $stride = 1;
+            foreach (['Protein', 'Sayuran', 'Karbohidrat'] as $category) {
+                $selectionStrides[$category] = $stride;
+                $stride *= max(1, $shuffledInventory[$category]->count());
+            }
+            $mealIndex = 0;
+            $dayCalories = 0;
+            $dayCarbs = 0;
             foreach ($mealTypes as $type) {
-                if (collect($inventory)->contains(fn ($items) => empty($items))) {
-                    $mealPlan[$dateLabel][$type] = 'Budget terlalu rendah untuk menyusun menu sehat';
+                $missingCategories = collect($inventory)->filter(fn (array $items) => empty($items))->keys();
+                if ($missingCategories->isNotEmpty()) {
+                    $mealPlan[$dateLabel][$type] = 'Belum ada bahan untuk kategori '.$missingCategories->implode(', ').' yang sesuai dengan pantangan dan anggaran.';
+
                     continue;
                 }
-                $selected = $shuffledInventory->map(fn ($items) => $items->get($mealIndex % $items->count()));
+                $selected = [];
+                foreach ($categoryNames as $category) {
+                    $items = $shuffledInventory[$category];
+                    $selected[$category] = $items->get(intdiv($mealIndex, $selectionStrides[$category]) % $items->count());
+                }
+                $selected = collect($selected);
                 $mealCalories = $selected->sum('calories');
                 $mealCarbs = $selected->sum('carbs');
                 $recipeIngredients = $selected->map(fn ($item, $category) => [
+                    'category' => $category,
                     'name' => $item['name'],
-                    'quantity' => $this->portionFor($category, $item['name']),
+                    'quantity' => $this->portionFor($category, $item['name'], $bmi['nutrition_mode'], $data['sport']),
                 ])->values()->all();
-                $recipe = $this->recipeFor($type, $recipeIngredients, $usedRecipes[$type], $data['equipment']);
-                $usedRecipes[$type][] = $recipe['title'];
+                $recipe = $this->recipeFor($type, $recipeIngredients, $data['equipment'], $bmi['nutrition_mode']);
                 $mealPlan[$dateLabel][$type] = [
                     'menu' => $selected->pluck('name')->values(),
                     'calories' => $mealCalories,
@@ -144,25 +232,39 @@ class MealPrepController extends Controller
                     'recipe' => $recipe,
                 ];
                 $mealIndex++;
-                if ($day === 1) { $dailyPlanCalories += $mealCalories; $dailyPlanCarbs += $mealCarbs; }
+                $dayCalories += $mealCalories;
+                $dayCarbs += $mealCarbs;
             }
+            $totalCalories += $dayCalories;
+            $totalCarbs += $dayCarbs;
         }
+        $totalBudget = $data['budget'] * $days;
+        $dailyPlanCalories = (int) round($totalCalories / $days);
+        $dailyPlanCarbs = (int) round($totalCarbs / $days);
 
         return response()->json([
             'status' => 'success',
             'subscription_status' => $isSubscribed ? 'Weekly Plan' : 'Daily Plan',
-            'shopping_list' => $inventory,
+            'daily_budget' => (float) $data['budget'],
+            'total_budget' => $totalBudget,
+            'daily_shopping_lists' => $dailyShoppingLists,
+            'shopping_list' => reset($dailyShoppingLists)['items'],
             'total_cost' => $totalCost,
-            'remaining_budget' => $data['budget'] - $totalCost,
-            'total_calories' => $dailyPlanCalories * $days,
+            'remaining_budget' => $totalBudget - $totalCost,
+            'total_calories' => $totalCalories,
             'daily_calories' => $dailyPlanCalories,
             'daily_carbs' => $dailyPlanCarbs,
             'max_carbs_per_day' => $maxCarbs,
             'recommended_calories' => $dailyCalories,
             'protein_target' => $proteinTarget,
             'activity_factor' => $activityFactor,
+            'maintenance_calories' => $maintenanceCalories,
+            'bmi_assessment' => $bmi,
+            'nutrition_mode' => $bmi['nutrition_mode'],
+            'diet_mode_enabled' => $bmi['automatic_diet'],
             'sport' => $data['sport'],
             'muscle_groups' => $data['muscle_groups'] ?? [],
+            'excluded_foods' => $excludedTerms,
             'equipment' => $data['equipment'],
             'start_date' => $startDate->toDateString(),
             'end_date' => $endDate->toDateString(),
@@ -170,16 +272,57 @@ class MealPrepController extends Controller
         ]);
     }
 
-    public function umkmMenus(Request $request)
+    public function umkmMenus(Request $request, BodyMassIndexAssessment $bmiAssessment)
     {
-        $data = $request->validate(['sport' => ['required', 'in:binaraga,cycling,runner']]);
+        $data = $request->validate([
+            'sport' => ['required', 'in:binaraga,cycling,runner,normal'],
+            'excluded_foods' => ['nullable', 'string', 'max:1000'],
+            'weight' => ['required_with:age,height,sex', 'numeric', 'min:20', 'max:300'],
+            'age' => ['required_with:weight,height,sex', 'numeric', 'min:13', 'max:100'],
+            'height' => ['required_with:weight,age,sex', 'numeric', 'min:100', 'max:230'],
+            'sex' => ['required_with:weight,age,height', 'in:male,female'],
+        ]);
+        $excludedTerms = $this->excludedFoodTerms($data['excluded_foods'] ?? '');
+        $hasBodyProfile = isset($data['weight'], $data['age'], $data['height'], $data['sex']);
+        $bmi = $hasBodyProfile
+            ? $bmiAssessment->assess((float) $data['weight'], (float) $data['age'], (float) $data['height'], $data['sex'], $data['sport'])
+            : null;
+        $hideUnverifiedMenus = $bmi !== null && in_array($bmi['nutrition_mode'], [
+            'weight_management',
+            'balanced_weight_management',
+            'balanced_weight_support',
+        ], true);
+
+        if ($hideUnverifiedMenus) {
+            return response()->json([
+                'status' => 'success',
+                'data' => [],
+                'message' => 'Menu UMKM disembunyikan karena informasi gizi dan porsinya belum dapat diverifikasi sesuai mode plan otomatis.',
+            ]);
+        }
 
         $menus = Meal::query()
             ->where('is_available', true)
             ->whereNotNull('seller_name')
             ->where('seller_name', '!=', '')
             ->get()
-            ->filter(fn (Meal $meal) => in_array($data['sport'], $meal->sport_segments ?? [], true))
+            ->filter(function (Meal $meal) use ($data, $excludedTerms): bool {
+                if (! in_array($data['sport'], $meal->sport_segments ?? [], true)) {
+                    return false;
+                }
+                if (empty($excludedTerms)) {
+                    return true;
+                }
+                if (trim((string) $meal->ingredients) === '') {
+                    return false;
+                }
+
+                return ! $this->containsExcludedTerm(implode(' ', [
+                    $meal->name,
+                    $meal->ingredients,
+                    $meal->description ?? '',
+                ]), $excludedTerms);
+            })
             ->values()
             ->map(fn (Meal $meal) => [
                 'id' => $meal->id,
@@ -216,79 +359,163 @@ class MealPrepController extends Controller
         };
     }
 
-    private function recipeFor(string $type, array $ingredients, array $usedTitles = [], array $equipment = []): array
+    private function recipeFor(string $type, array $ingredients, array $equipment, string $nutritionMode): array
     {
-        $recipes = [
-            'Breakfast' => [
-                ['title' => 'Savory protein breakfast bowl', 'steps' => ['Masak karbohidrat sampai matang dan lembut.', 'Tumis protein dengan sedikit minyak dan bumbu.', 'Tambahkan sayuran, lalu sajikan dalam satu mangkuk.']],
-                ['title' => 'Simple breakfast stir-fry', 'steps' => ['Potong semua bahan menjadi ukuran kecil.', 'Tumis protein dan karbohidrat sampai harum.', 'Masukkan sayuran terakhir agar tetap renyah.']],
-                ['title' => 'Warm balanced breakfast plate', 'steps' => ['Siapkan karbohidrat sesuai takaran satu porsi.', 'Masak protein hingga matang sempurna.', 'Sajikan dengan sayuran segar atau kukus.']],
-            ],
-            'Lunch' => [
-                ['title' => 'Healthy lunch rice bowl', 'steps' => ['Masak karbohidrat sampai matang.', 'Panggang atau tumis protein dengan bumbu pilihan.', 'Susun protein, karbohidrat, dan sayuran dalam mangkuk.']],
-                ['title' => 'Colorful lunch plate', 'steps' => ['Rebus atau kukus sayuran selama 3 sampai 5 menit.', 'Masak protein sampai tidak berwarna merah muda.', 'Sajikan bersama karbohidrat dan sayuran.']],
-                ['title' => 'Quick balanced lunch', 'steps' => ['Siapkan semua bahan sesuai takaran.', 'Tumis protein bersama karbohidrat hingga tercampur.', 'Tambahkan sayuran dan masak sebentar sebelum disajikan.']],
-            ],
-            'Dinner' => [
-                ['title' => 'Light dinner bowl', 'steps' => ['Kukus sayuran hingga sedikit lunak.', 'Masak protein dengan api sedang sampai matang.', 'Sajikan dengan karbohidrat dalam porsi ringan.']],
-                ['title' => 'Simple nourishing dinner', 'steps' => ['Masak karbohidrat sesuai takaran.', 'Panggang atau tumis protein tanpa terlalu banyak minyak.', 'Tambahkan sayuran dan bumbui secukupnya.']],
-                ['title' => 'Easy one-pan dinner', 'steps' => ['Panaskan wajan dan masak protein terlebih dahulu.', 'Masukkan karbohidrat, lalu aduk sampai hangat.', 'Tambahkan sayuran terakhir dan sajikan.']],
-            ],
-        ];
-        $recipes['Breakfast'] = array_merge($recipes['Breakfast'], [
-            ['title' => 'Protein veggie scramble', 'steps' => ['Masak protein sampai matang.', 'Tambahkan sayuran dan aduk sebentar.', 'Sajikan dengan karbohidrat sesuai porsi.']],
-            ['title' => 'Creamy oat power bowl', 'steps' => ['Masak oat dengan air sampai lembut.', 'Tambahkan protein yang sudah matang.', 'Sajikan bersama sayuran segar.']],
-            ['title' => 'Quick morning grain bowl', 'steps' => ['Hangatkan karbohidrat yang sudah dimasak.', 'Tambahkan protein dan sayuran yang telah dipotong.', 'Bumbui ringan lalu sajikan.']],
-            ['title' => 'Fresh breakfast veggie plate', 'steps' => ['Kukus sayuran hingga matang.', 'Masak protein menggunakan sedikit minyak.', 'Sajikan dengan karbohidrat dalam satu piring.']],
-        ]);
-        $recipes['Lunch'] = array_merge($recipes['Lunch'], [
-            ['title' => 'Protein veggie power bowl', 'steps' => ['Masak karbohidrat sesuai takaran.', 'Panggang protein hingga matang.', 'Tambahkan sayuran dan sajikan dalam mangkuk.']],
-            ['title' => 'Colorful grain stir-fry', 'steps' => ['Tumis protein sampai harum.', 'Masukkan karbohidrat dan aduk rata.', 'Tambahkan sayuran terakhir agar tetap segar.']],
-            ['title' => 'Simple wholesome lunch', 'steps' => ['Kukus sayuran dan sisihkan.', 'Masak protein dengan bumbu sederhana.', 'Susun semua bahan menjadi satu porsi makan.']],
-            ['title' => 'Everyday balanced bowl', 'steps' => ['Siapkan karbohidrat yang telah matang.', 'Tumis protein dan sayuran secara terpisah.', 'Gabungkan lalu sajikan hangat.']],
-        ]);
-        $recipes['Dinner'] = array_merge($recipes['Dinner'], [
-            ['title' => 'Lean protein veggie bowl', 'steps' => ['Masak protein hingga matang tanpa terlalu banyak minyak.', 'Kukus sayuran agar tetap ringan.', 'Sajikan dengan karbohidrat secukupnya.']],
-            ['title' => 'Comforting warm dinner', 'steps' => ['Hangatkan karbohidrat sesuai porsi.', 'Masak protein dengan api sedang.', 'Tambahkan sayuran dan bumbui secukupnya.']],
-            ['title' => 'Low-fuss dinner plate', 'steps' => ['Potong sayuran dan protein seperlunya.', 'Masak protein lalu tambahkan sayuran.', 'Sajikan dengan karbohidrat yang sudah matang.']],
-            ['title' => 'Garden protein supper', 'steps' => ['Kukus sayuran hingga renyah lembut.', 'Panggang protein hingga matang merata.', 'Sajikan bersama karbohidrat dalam porsi seimbang.']],
-        ]);
-        $options = collect($recipes[$type] ?? $recipes['Dinner'])
-            ->reject(fn ($recipe) => in_array($recipe['title'], $usedTitles, true))
-            ->values()
-            ->all();
-        if (empty($options)) $options = $recipes[$type] ?? $recipes['Dinner'];
-        $recipe = $options[array_rand($options)];
+        $ingredientNames = collect($ingredients)->pluck('name')->all();
+        $title = match ($type) {
+            'Breakfast' => 'Sarapan bowl',
+            'Lunch' => 'Lunch bowl',
+            default => 'Dinner bowl',
+        };
 
         return [
-            'title' => $recipe['title'],
+            'title' => $this->recipeTitlePrefix($nutritionMode).$title.': '.implode(' + ', $ingredientNames),
             'ingredients' => $ingredients,
             'servings' => 1,
-            'steps' => $this->cookingSteps($equipment),
+            'steps' => $this->cookingSteps($equipment, $ingredients),
             'equipment' => $equipment,
+            'nutrition_mode' => $nutritionMode,
         ];
     }
 
-    private function cookingSteps(array $equipment): array
+    private function recipeTitlePrefix(string $nutritionMode): string
     {
-        if (in_array('kompor', $equipment, true)) {
-            return ['Siapkan bahan dan masak karbohidrat sesuai takaran.', 'Masak protein hingga matang menggunakan kompor dan wajan.', 'Tambahkan sayuran, bumbui secukupnya, lalu sajikan.'];
-        }
-        if (in_array('rice_cooker', $equipment, true)) {
-            return ['Siapkan bahan dan masak karbohidrat di rice cooker.', 'Kukus protein menggunakan keranjang rice cooker hingga matang.', 'Tambahkan sayuran kukus dan bumbu, lalu sajikan.'];
-        }
-        if (in_array('oven', $equipment, true)) {
-            return ['Panaskan oven sesuai petunjuk alat.', 'Panggang protein dan sayuran hingga matang merata.', 'Sajikan bersama karbohidrat yang telah dimasak.'];
-        }
-        if (in_array('air_fryer', $equipment, true)) {
-            return ['Siapkan bahan dan bumbui protein secukupnya.', 'Masak protein dan sayuran di air fryer hingga matang.', 'Sajikan dengan karbohidrat yang telah dimasak.'];
-        }
-
-        return ['Siapkan bahan dan atur dalam wadah tahan panas.', 'Kukus karbohidrat, protein, dan sayuran hingga matang.', 'Bumbui secukupnya lalu sajikan hangat.'];
+        return match ($nutritionMode) {
+            'weight_management' => 'Diet pengelolaan berat · ',
+            'balanced_weight_management' => 'Menu seimbang remaja · ',
+            'balanced_weight_support' => 'Menu dukungan berat badan · ',
+            default => '',
+        };
     }
 
-    private function portionFor(string $category, string $productName): string
+    private function cookingSteps(array $equipment, array $ingredients): array
     {
+        $ingredientsByCategory = collect($ingredients)->keyBy('category');
+        $carbohydrate = $ingredientsByCategory->get('Karbohidrat')['name'] ?? 'karbohidrat pilihan';
+        $protein = $ingredientsByCategory->get('Protein')['name'] ?? 'protein pilihan';
+        $vegetable = $ingredientsByCategory->get('Sayuran')['name'] ?? 'sayuran pilihan';
+        $prepStep = in_array('knife', $equipment, true)
+            ? 'Cuci dan potong '.$vegetable.' menggunakan pisau dan talenan.'
+            : 'Cuci bahan dan siapkan '.$vegetable.' dalam ukuran saji.';
+        if (in_array('measuring_tools', $equipment, true)) {
+            $prepStep .= ' Takar setiap bahan sesuai porsi resep.';
+        }
+        $storageStep = in_array('food_storage', $equipment, true)
+            ? ['Simpan bahan yang belum dimasak dalam wadah makanan yang tersedia.']
+            : [];
+
+        if (in_array('kompor', $equipment, true)) {
+            return array_merge([$prepStep, 'Masak protein hingga matang menggunakan kompor dan wajan.', 'Masak '.$carbohydrate.' sesuai petunjuk kemasan, tumis '.$vegetable.' sampai matang, lalu sajikan bersama '.$protein.'.'], $storageStep);
+        }
+        if (in_array('rice_cooker', $equipment, true)) {
+            return array_merge([$prepStep.' Masak '.$carbohydrate.' di rice cooker.', 'Masak '.$protein.' hingga matang di rice cooker.', 'Tambahkan '.$vegetable.' dan masak hingga matang, lalu sajikan.'], $storageStep);
+        }
+        if (in_array('oven', $equipment, true)) {
+            return array_merge([$prepStep.' Panaskan oven sesuai petunjuk alat.', 'Panggang '.$carbohydrate.', '.$protein.', dan '.$vegetable.' hingga matang merata, lalu sajikan.'], $storageStep);
+        }
+        if (in_array('air_fryer', $equipment, true)) {
+            return array_merge([$prepStep.' Bumbui '.$protein.' secukupnya.', 'Masak '.$carbohydrate.', '.$protein.', dan '.$vegetable.' di air fryer hingga matang, lalu sajikan.'], $storageStep);
+        }
+
+        return array_merge([$prepStep.' Atur bahan dalam wadah tahan panas.', 'Kukus '.$carbohydrate.', '.$protein.', dan '.$vegetable.' hingga matang, lalu sajikan hangat.'], $storageStep);
+    }
+
+    private function canCookCarbohydrate(StoreProduct $product, array $equipment): bool
+    {
+        if (array_intersect($equipment, ['kompor', 'rice_cooker'])) {
+            return true;
+        }
+
+        $productName = mb_strtolower($product->product_name);
+
+        foreach (['kentang', 'ubi', 'jagung'] as $airFryerFriendlyIngredient) {
+            if (str_contains($productName, $airFryerFriendlyIngredient)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private function excludedFoodTerms(string $excludedFoods): array
+    {
+        $aliases = [
+            'seafood' => ['seafood', 'ikan', 'udang', 'cumi', 'kerang', 'kepiting'],
+            'makanan laut' => ['seafood', 'ikan', 'udang', 'cumi', 'kerang', 'kepiting'],
+            'dairy' => ['susu', 'keju', 'yogurt', 'butter', 'dairy'],
+            'susu' => ['susu', 'keju', 'yogurt', 'butter'],
+            'laktosa' => ['susu', 'keju', 'yogurt', 'butter', 'laktosa'],
+            'lactose' => ['susu', 'keju', 'yogurt', 'butter', 'lactose'],
+            'gluten' => ['gluten', 'gandum', 'tepung', 'roti', 'pasta', 'mie'],
+            'kacang' => ['kacang', 'almond', 'mete', 'kenari'],
+            'nuts' => ['kacang', 'almond', 'mete', 'kenari'],
+            'telur' => ['telur', 'egg'],
+            'egg' => ['telur', 'egg'],
+            'ayam' => ['ayam', 'chicken'],
+            'chicken' => ['ayam', 'chicken'],
+        ];
+
+        return collect(preg_split('/[,;\r\n]+/', $excludedFoods) ?: [])
+            ->map(fn (string $term) => mb_strtolower(trim($term)))
+            ->filter()
+            ->flatMap(fn (string $term) => $aliases[$term] ?? [$term])
+            ->unique()
+            ->values()
+            ->all();
+    }
+
+    private function isExcludedFood(StoreProduct $product, array $excludedTerms): bool
+    {
+        $searchableText = mb_strtolower(implode(' ', array_filter([
+            $product->product_name,
+            $product->subcategory,
+        ])));
+
+        return $this->containsExcludedTerm($searchableText, $excludedTerms);
+    }
+
+    private function containsExcludedTerm(string $searchableText, array $excludedTerms): bool
+    {
+        $searchableText = mb_strtolower($searchableText);
+
+        foreach ($excludedTerms as $term) {
+            if (str_contains($searchableText, $term)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private function portionFor(string $category, string $productName, string $nutritionMode, string $sport): string
+    {
+        if ($sport === 'binaraga') {
+            return match ($category) {
+                'Karbohidrat' => str_contains(strtolower($productName), 'beras') ? '75 g beras mentah' : '100 g',
+                'Protein' => str_contains(strtolower($productName), 'telur') ? '3 butir' : '150 g',
+                'Sayuran' => '100 g',
+                default => 'secukupnya',
+            };
+        }
+
+        if ($nutritionMode === 'weight_management') {
+            return match ($category) {
+                'Karbohidrat' => str_contains(strtolower($productName), 'beras') ? '60 g beras mentah' : '80 g',
+                'Protein' => str_contains(strtolower($productName), 'telur') ? '2 butir' : '120 g',
+                'Sayuran' => '150 g',
+                default => 'secukupnya',
+            };
+        }
+
+        if ($nutritionMode === 'balanced_weight_support') {
+            return match ($category) {
+                'Karbohidrat' => str_contains(strtolower($productName), 'beras') ? '90 g beras mentah' : '120 g',
+                'Protein' => str_contains(strtolower($productName), 'telur') ? '3 butir' : '120 g',
+                'Sayuran' => '100 g',
+                default => 'secukupnya',
+            };
+        }
+
         return match ($category) {
             'Karbohidrat' => str_contains(strtolower($productName), 'beras') ? '75 g beras mentah' : '100 g',
             'Protein' => str_contains(strtolower($productName), 'telur') ? '2 butir' : '100 g',

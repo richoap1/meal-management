@@ -65,7 +65,7 @@ class AdminMealController extends Controller
             'carbs' => ['required_with:seller_name', 'nullable', 'integer', 'min:0', 'max:1000'],
             'type' => ['required', 'in:breakfast,lunch,dinner'],
             'sport_segments' => ['required_with:seller_name', 'nullable', 'array', 'min:1'],
-            'sport_segments.*' => ['in:binaraga,cycling,runner'],
+            'sport_segments.*' => ['in:binaraga,cycling,runner,normal'],
             'is_available' => ['nullable', 'boolean'],
             'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
         ]);

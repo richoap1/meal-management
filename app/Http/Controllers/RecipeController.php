@@ -3,23 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\Meal;
+use RuntimeException;
 
 class RecipeController extends Controller
 {
     public function index()
     {
         $recipes = collect($this->recipes());
+        $workbookRecipes = collect($this->workbookRecipes())->map(fn (array $recipe) => [
+            ...$recipe,
+            'type' => 'Main course',
+            'image' => 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=640&q=80',
+        ]);
         $databaseRecipes = Meal::where('is_available', true)->get()->map(fn (Meal $meal) => [
             'title' => $meal->name,
             'type' => ucfirst($meal->type),
             'mode' => 'Non-diet',
             'calories' => $meal->calories ?? 0,
-            'image' => $meal->image_path ? asset('storage/' . $meal->image_path) : 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=640&q=80',
+            'carbs' => $meal->carbs,
+            'image' => $meal->image_path ? asset('storage/'.$meal->image_path) : 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=640&q=80',
             'ingredients' => preg_split('/\r\n|\r|\n/', $meal->ingredients ?: ''),
             'steps' => preg_split('/\r\n|\r|\n/', $meal->instructions ?: ''),
+            'equipment' => [],
+            'source' => null,
         ]);
 
-        return view('recipes.index', ['recipes' => $recipes->merge($databaseRecipes)->all()]);
+        return view('recipes.index', ['recipes' => $recipes->merge($workbookRecipes)->merge($databaseRecipes)->all()]);
+    }
+
+    private function workbookRecipes(): array
+    {
+        $path = resource_path('data/workbook-recipes.json');
+        if (! is_file($path)) {
+            throw new RuntimeException('The bundled workbook recipe collection could not be found.');
+        }
+
+        return json_decode(file_get_contents($path), true, flags: JSON_THROW_ON_ERROR);
     }
 
     private function recipes(): array

@@ -1,0 +1,2526 @@
+{
+    "super_indo":  [
+                       {
+                           "sku":  "SI-0001",
+                           "product_name":  "Apel Fuji",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  74900
+                       },
+                       {
+                           "sku":  "SI-0002",
+                           "product_name":  "Apel Malang",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  39900
+                       },
+                       {
+                           "sku":  "SI-0003",
+                           "product_name":  "Pisang Cavendish",
+                           "brand":  "Sunpride",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0004",
+                           "product_name":  "Pisang Kepok",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  19900
+                       },
+                       {
+                           "sku":  "SI-0005",
+                           "product_name":  "Jeruk Valencia",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g (per 100 g)",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  4950
+                       },
+                       {
+                           "sku":  "SI-0006",
+                           "product_name":  "Jeruk Mandarin",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g (per 100 g)",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  5990
+                       },
+                       {
+                           "sku":  "SI-0007",
+                           "product_name":  "Pepaya",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  14900
+                       },
+                       {
+                           "sku":  "SI-0008",
+                           "product_name":  "Semangka Merah",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  12900
+                       },
+                       {
+                           "sku":  "SI-0009",
+                           "product_name":  "Melon",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  15900
+                       },
+                       {
+                           "sku":  "SI-0010",
+                           "product_name":  "Buah Naga Merah",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0011",
+                           "product_name":  "Mangga Harum Manis",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  34900
+                       },
+                       {
+                           "sku":  "SI-0012",
+                           "product_name":  "Alpukat",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0013",
+                           "product_name":  "Anggur Red Globe",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g (per 100 g)",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  11290
+                       },
+                       {
+                           "sku":  "SI-0014",
+                           "product_name":  "Pir Century",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  39900
+                       },
+                       {
+                           "sku":  "SI-0015",
+                           "product_name":  "Nanas",
+                           "brand":  "Naturally Fresh",
+                           "package":  "pcs",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  15000
+                       },
+                       {
+                           "sku":  "SI-0016",
+                           "product_name":  "Salak Pondoh",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Buah",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  21900
+                       },
+                       {
+                           "sku":  "SI-0017",
+                           "product_name":  "Bayam",
+                           "brand":  "Super Fresh",
+                           "package":  "ikat",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  5000
+                       },
+                       {
+                           "sku":  "SI-0018",
+                           "product_name":  "Kangkung",
+                           "brand":  "Super Fresh",
+                           "package":  "ikat",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  4500
+                       },
+                       {
+                           "sku":  "SI-0019",
+                           "product_name":  "Sawi Hijau",
+                           "brand":  "Super Fresh",
+                           "package":  "ikat",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  5000
+                       },
+                       {
+                           "sku":  "SI-0020",
+                           "product_name":  "Pakcoy",
+                           "brand":  "Super Fresh",
+                           "package":  "pack",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  9900
+                       },
+                       {
+                           "sku":  "SI-0021",
+                           "product_name":  "Wortel",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  18900
+                       },
+                       {
+                           "sku":  "SI-0022",
+                           "product_name":  "Kentang",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  19900
+                       },
+                       {
+                           "sku":  "SI-0023",
+                           "product_name":  "Tomat",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  24900
+                       },
+                       {
+                           "sku":  "SI-0024",
+                           "product_name":  "Bawang Merah",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  68900
+                       },
+                       {
+                           "sku":  "SI-0025",
+                           "product_name":  "Bawang Putih",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  39900
+                       },
+                       {
+                           "sku":  "SI-0026",
+                           "product_name":  "Bawang Bombay",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0027",
+                           "product_name":  "Cabai Merah Keriting",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  69900
+                       },
+                       {
+                           "sku":  "SI-0028",
+                           "product_name":  "Cabai Rawit",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  79900
+                       },
+                       {
+                           "sku":  "SI-0029",
+                           "product_name":  "Kol Putih",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  12900
+                       },
+                       {
+                           "sku":  "SI-0030",
+                           "product_name":  "Brokoli",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  39900
+                       },
+                       {
+                           "sku":  "SI-0031",
+                           "product_name":  "Kembang Kol",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0032",
+                           "product_name":  "Timun",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  12900
+                       },
+                       {
+                           "sku":  "SI-0033",
+                           "product_name":  "Terong Ungu",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  14900
+                       },
+                       {
+                           "sku":  "SI-0034",
+                           "product_name":  "Buncis",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  24900
+                       },
+                       {
+                           "sku":  "SI-0035",
+                           "product_name":  "Jagung Manis",
+                           "brand":  "Super Fresh",
+                           "package":  "pcs",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  6500
+                       },
+                       {
+                           "sku":  "SI-0036",
+                           "product_name":  "Jamur Enoki",
+                           "brand":  "Naturally Fresh",
+                           "package":  "pack 100 g",
+                           "subcategory":  "Sayuran",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  11980
+                       },
+                       {
+                           "sku":  "SI-0037",
+                           "product_name":  "Jahe",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Herbal \u0026 bumbu segar",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  39900
+                       },
+                       {
+                           "sku":  "SI-0038",
+                           "product_name":  "Lengkuas",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Herbal \u0026 bumbu segar",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  19900
+                       },
+                       {
+                           "sku":  "SI-0039",
+                           "product_name":  "Serai",
+                           "brand":  "Super Fresh",
+                           "package":  "ikat",
+                           "subcategory":  "Herbal \u0026 bumbu segar",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  5000
+                       },
+                       {
+                           "sku":  "SI-0040",
+                           "product_name":  "Daun bawang",
+                           "brand":  "Super Fresh",
+                           "package":  "ikat",
+                           "subcategory":  "Herbal \u0026 bumbu segar",
+                           "catalog_category":  "Buah \u0026 Sayur",
+                           "reference_source":  "Super Indo",
+                           "price":  7000
+                       },
+                       {
+                           "sku":  "SI-0041",
+                           "product_name":  "Dada ayam fillet",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Ayam",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  6490
+                       },
+                       {
+                           "sku":  "SI-0042",
+                           "product_name":  "Paha ayam tanpa tulang",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Ayam",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  6490
+                       },
+                       {
+                           "sku":  "SI-0043",
+                           "product_name":  "Ayam broiler utuh",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Ayam",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  48900
+                       },
+                       {
+                           "sku":  "SI-0044",
+                           "product_name":  "Sayap ayam",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Ayam",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  42900
+                       },
+                       {
+                           "sku":  "SI-0045",
+                           "product_name":  "Daging sapi giling",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Daging sapi",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  15990
+                       },
+                       {
+                           "sku":  "SI-0046",
+                           "product_name":  "Daging semur",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Daging sapi",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  16290
+                       },
+                       {
+                           "sku":  "SI-0047",
+                           "product_name":  "Daging rendang",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Daging sapi",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  17590
+                       },
+                       {
+                           "sku":  "SI-0048",
+                           "product_name":  "Sirloin",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Daging sapi",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  21990
+                       },
+                       {
+                           "sku":  "SI-0049",
+                           "product_name":  "Iga sapi",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Daging sapi",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  15890
+                       },
+                       {
+                           "sku":  "SI-0050",
+                           "product_name":  "Hati sapi",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Daging sapi",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  5490
+                       },
+                       {
+                           "sku":  "SI-0051",
+                           "product_name":  "Ikan tuna fillet",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Ikan",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  11890
+                       },
+                       {
+                           "sku":  "SI-0052",
+                           "product_name":  "Ikan nila",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Ikan",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  67900
+                       },
+                       {
+                           "sku":  "SI-0053",
+                           "product_name":  "Ikan bandeng",
+                           "brand":  "Super Fresh",
+                           "package":  "kg",
+                           "subcategory":  "Ikan",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  39900
+                       },
+                       {
+                           "sku":  "SI-0054",
+                           "product_name":  "Ikan salmon fillet",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Ikan",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  42990
+                       },
+                       {
+                           "sku":  "SI-0055",
+                           "product_name":  "Udang pancet",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Seafood",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  19450
+                       },
+                       {
+                           "sku":  "SI-0056",
+                           "product_name":  "Cumi-cumi",
+                           "brand":  "Super Fresh",
+                           "package":  "100 g",
+                           "subcategory":  "Seafood",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  12990
+                       },
+                       {
+                           "sku":  "SI-0057",
+                           "product_name":  "Kerang",
+                           "brand":  "Super Fresh",
+                           "package":  "pack",
+                           "subcategory":  "Seafood",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0058",
+                           "product_name":  "Telur ayam negeri",
+                           "brand":  "Daily Fresh",
+                           "package":  "10 butir",
+                           "subcategory":  "Telur",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  27590
+                       },
+                       {
+                           "sku":  "SI-0059",
+                           "product_name":  "Telur omega",
+                           "brand":  "Happy Egg",
+                           "package":  "10 butir",
+                           "subcategory":  "Telur",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  28690
+                       },
+                       {
+                           "sku":  "SI-0060",
+                           "product_name":  "Telur cage-free",
+                           "brand":  "365",
+                           "package":  "10 butir",
+                           "subcategory":  "Telur",
+                           "catalog_category":  "Daging, Ayam, Ikan \u0026 Telur",
+                           "reference_source":  "Super Indo",
+                           "price":  34590
+                       },
+                       {
+                           "sku":  "SI-0061",
+                           "product_name":  "Beras Ramos",
+                           "brand":  "Setra Ramos",
+                           "package":  "5 kg (pcs/pack)",
+                           "subcategory":  "Beras",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  73900
+                       },
+                       {
+                           "sku":  "SI-0062",
+                           "product_name":  "Beras premium",
+                           "brand":  "Topi Koki",
+                           "package":  "5 kg (pcs/pack)",
+                           "subcategory":  "Beras",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  79900
+                       },
+                       {
+                           "sku":  "SI-0063",
+                           "product_name":  "Beras pandan wangi",
+                           "brand":  "Cap Ayam Jago",
+                           "package":  "5 kg (pcs/pack)",
+                           "subcategory":  "Beras",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  89900
+                       },
+                       {
+                           "sku":  "SI-0064",
+                           "product_name":  "Minyak goreng",
+                           "brand":  "365",
+                           "package":  "1 L (pcs/pack)",
+                           "subcategory":  "Minyak goreng",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  21950
+                       },
+                       {
+                           "sku":  "SI-0065",
+                           "product_name":  "Minyak goreng pouch",
+                           "brand":  "365",
+                           "package":  "2 L (pcs/pack)",
+                           "subcategory":  "Minyak goreng",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  42950
+                       },
+                       {
+                           "sku":  "SI-0066",
+                           "product_name":  "Minyak goreng",
+                           "brand":  "Sania",
+                           "package":  "2 L (pcs/pack)",
+                           "subcategory":  "Minyak goreng",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  42490
+                       },
+                       {
+                           "sku":  "SI-0067",
+                           "product_name":  "Minyak goreng",
+                           "brand":  "Fortune",
+                           "package":  "2 L (pcs/pack)",
+                           "subcategory":  "Minyak goreng",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  42900
+                       },
+                       {
+                           "sku":  "SI-0068",
+                           "product_name":  "Gula pasir putih",
+                           "brand":  "365",
+                           "package":  "1 kg (pcs/pack)",
+                           "subcategory":  "Gula",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  17500
+                       },
+                       {
+                           "sku":  "SI-0069",
+                           "product_name":  "Gula pasir kuning",
+                           "brand":  "365",
+                           "package":  "1 kg (pcs/pack)",
+                           "subcategory":  "Gula",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  17500
+                       },
+                       {
+                           "sku":  "SI-0070",
+                           "product_name":  "Tepung terigu serbaguna",
+                           "brand":  "Sania",
+                           "package":  "1 kg (pcs/pack)",
+                           "subcategory":  "Tepung",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  14990
+                       },
+                       {
+                           "sku":  "SI-0071",
+                           "product_name":  "Tepung terigu protein sedang",
+                           "brand":  "Segitiga Biru",
+                           "package":  "1 kg (pcs/pack)",
+                           "subcategory":  "Tepung",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  12990
+                       },
+                       {
+                           "sku":  "SI-0072",
+                           "product_name":  "Tepung maizena",
+                           "brand":  "Maizenaku",
+                           "package":  "150 g (pcs/pack)",
+                           "subcategory":  "Tepung",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  6500
+                       },
+                       {
+                           "sku":  "SI-0073",
+                           "product_name":  "Garam meja",
+                           "brand":  "Kapal",
+                           "package":  "250 g (pcs/pack)",
+                           "subcategory":  "Garam",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  3500
+                       },
+                       {
+                           "sku":  "SI-0074",
+                           "product_name":  "Penyedap rasa",
+                           "brand":  "Royco",
+                           "package":  "renceng/varian (pcs/pack)",
+                           "subcategory":  "Bumbu",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  12000
+                       },
+                       {
+                           "sku":  "SI-0075",
+                           "product_name":  "Kaldu bubuk",
+                           "brand":  "Masako",
+                           "package":  "100 g (pcs/pack)",
+                           "subcategory":  "Bumbu",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  6500
+                       },
+                       {
+                           "sku":  "SI-0076",
+                           "product_name":  "Bumbu nasi goreng",
+                           "brand":  "Sajiku",
+                           "package":  "20 g (pcs/pack)",
+                           "subcategory":  "Bumbu",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  2500
+                       },
+                       {
+                           "sku":  "SI-0077",
+                           "product_name":  "Bumbu rendang",
+                           "brand":  "Bamboe",
+                           "package":  "50 g (pcs/pack)",
+                           "subcategory":  "Bumbu",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  7500
+                       },
+                       {
+                           "sku":  "SI-0078",
+                           "product_name":  "Kecap manis pouch",
+                           "brand":  "Bango",
+                           "package":  "540 g (pcs/pack)",
+                           "subcategory":  "Kecap \u0026 saus",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  14900
+                       },
+                       {
+                           "sku":  "SI-0079",
+                           "product_name":  "Kecap manis pouch",
+                           "brand":  "ABC",
+                           "package":  "685 g (pcs/pack)",
+                           "subcategory":  "Kecap \u0026 saus",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  21990
+                       },
+                       {
+                           "sku":  "SI-0080",
+                           "product_name":  "Sambal ekstra pedas",
+                           "brand":  "Indofood",
+                           "package":  "275 ml (pcs/pack)",
+                           "subcategory":  "Kecap \u0026 saus",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  12490
+                       },
+                       {
+                           "sku":  "SI-0081",
+                           "product_name":  "Saus tomat",
+                           "brand":  "ABC",
+                           "package":  "335 g (pcs/pack)",
+                           "subcategory":  "Kecap \u0026 saus",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  10990
+                       },
+                       {
+                           "sku":  "SI-0082",
+                           "product_name":  "Santan instan",
+                           "brand":  "Kara",
+                           "package":  "200 ml (pcs/pack)",
+                           "subcategory":  "Santan",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  8500
+                       },
+                       {
+                           "sku":  "SI-0083",
+                           "product_name":  "Mi goreng jumbo",
+                           "brand":  "Indomie",
+                           "package":  "120 g (pcs/pack)",
+                           "subcategory":  "Makanan instan",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  3967
+                       },
+                       {
+                           "sku":  "SI-0084",
+                           "product_name":  "Mi kuah ayam bawang",
+                           "brand":  "Indomie",
+                           "package":  "69 g (pcs/pack)",
+                           "subcategory":  "Makanan instan",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  3200
+                       },
+                       {
+                           "sku":  "SI-0085",
+                           "product_name":  "Mi goreng",
+                           "brand":  "Mi Sedaap",
+                           "package":  "90 g (pcs/pack)",
+                           "subcategory":  "Makanan instan",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  3118
+                       },
+                       {
+                           "sku":  "SI-0086",
+                           "product_name":  "Spaghetti",
+                           "brand":  "La Fonte",
+                           "package":  "225 g (pcs/pack)",
+                           "subcategory":  "Pasta",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  13900
+                       },
+                       {
+                           "sku":  "SI-0087",
+                           "product_name":  "Makaroni",
+                           "brand":  "La Fonte",
+                           "package":  "225 g (pcs/pack)",
+                           "subcategory":  "Pasta",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  12900
+                       },
+                       {
+                           "sku":  "SI-0088",
+                           "product_name":  "Bihun jagung",
+                           "brand":  "Cap Dua Burung",
+                           "package":  "250 g (pcs/pack)",
+                           "subcategory":  "Bihun",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  17190
+                       },
+                       {
+                           "sku":  "SI-0089",
+                           "product_name":  "Oatmeal",
+                           "brand":  "Quaker",
+                           "package":  "200 g (pcs/pack)",
+                           "subcategory":  "Sereal \u0026 sarapan",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  22900
+                       },
+                       {
+                           "sku":  "SI-0090",
+                           "product_name":  "Sereal cokelat",
+                           "brand":  "Koko Krunch",
+                           "package":  "170 g (pcs/pack)",
+                           "subcategory":  "Sereal \u0026 sarapan",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  24900
+                       },
+                       {
+                           "sku":  "SI-0091",
+                           "product_name":  "Sarden saus tomat",
+                           "brand":  "ABC",
+                           "package":  "155 g (pcs/pack)",
+                           "subcategory":  "Makanan kaleng",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  10500
+                       },
+                       {
+                           "sku":  "SI-0092",
+                           "product_name":  "Kornet sapi",
+                           "brand":  "Pronas",
+                           "package":  "198 g (pcs/pack)",
+                           "subcategory":  "Makanan kaleng",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  22900
+                       },
+                       {
+                           "sku":  "SI-0093",
+                           "product_name":  "Jagung manis kaleng",
+                           "brand":  "Green Giant",
+                           "package":  "Whole kernel (pcs/pack)",
+                           "subcategory":  "Makanan kaleng",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  18900
+                       },
+                       {
+                           "sku":  "SI-0094",
+                           "product_name":  "Mayones",
+                           "brand":  "Maestro",
+                           "package":  "100 g (pcs/pack)",
+                           "subcategory":  "Saus \u0026 bumbu",
+                           "catalog_category":  "Sembako \u0026 Bumbu Dapur",
+                           "reference_source":  "Super Indo",
+                           "price":  8500
+                       },
+                       {
+                           "sku":  "SI-0095",
+                           "product_name":  "Susu UHT plain",
+                           "brand":  "Indomilk",
+                           "package":  "950 ml",
+                           "subcategory":  "Susu UHT",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  15250
+                       },
+                       {
+                           "sku":  "SI-0096",
+                           "product_name":  "Susu UHT cokelat",
+                           "brand":  "Indomilk",
+                           "package":  "950 ml",
+                           "subcategory":  "Susu UHT",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  15250
+                       },
+                       {
+                           "sku":  "SI-0097",
+                           "product_name":  "Susu UHT full cream",
+                           "brand":  "Ultra Milk",
+                           "package":  "1 L",
+                           "subcategory":  "Susu UHT",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  19900
+                       },
+                       {
+                           "sku":  "SI-0098",
+                           "product_name":  "Susu UHT cokelat",
+                           "brand":  "Ultra Milk",
+                           "package":  "750 ml",
+                           "subcategory":  "Susu UHT",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  18890
+                       },
+                       {
+                           "sku":  "SI-0099",
+                           "product_name":  "Fresh milk",
+                           "brand":  "Greenfields",
+                           "package":  "1 L",
+                           "subcategory":  "Susu segar",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0100",
+                           "product_name":  "Fresh milk",
+                           "brand":  "Milk Life",
+                           "package":  "1 L",
+                           "subcategory":  "Susu segar",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  29890
+                       },
+                       {
+                           "sku":  "SI-0101",
+                           "product_name":  "Susu bubuk full cream",
+                           "brand":  "Dancow",
+                           "package":  "400 g",
+                           "subcategory":  "Susu bubuk",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  45900
+                       },
+                       {
+                           "sku":  "SI-0102",
+                           "product_name":  "Susu kental manis",
+                           "brand":  "Frisian Flag",
+                           "package":  "370 g",
+                           "subcategory":  "Susu kental manis",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  13900
+                       },
+                       {
+                           "sku":  "SI-0103",
+                           "product_name":  "Yogurt drink",
+                           "brand":  "Cimory",
+                           "package":  "250 ml",
+                           "subcategory":  "Yogurt",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  8500
+                       },
+                       {
+                           "sku":  "SI-0104",
+                           "product_name":  "Thick yogurt",
+                           "brand":  "Yoseo",
+                           "package":  "90 g",
+                           "subcategory":  "Yogurt",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  16590
+                       },
+                       {
+                           "sku":  "SI-0105",
+                           "product_name":  "Keju cheddar",
+                           "brand":  "Kraft",
+                           "package":  "150 g",
+                           "subcategory":  "Keju",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  16590
+                       },
+                       {
+                           "sku":  "SI-0106",
+                           "product_name":  "Keju quick melt",
+                           "brand":  "Prochiz",
+                           "package":  "85 g",
+                           "subcategory":  "Keju",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  11490
+                       },
+                       {
+                           "sku":  "SI-0107",
+                           "product_name":  "Mozzarella shredded",
+                           "brand":  "Greenfields",
+                           "package":  "200 g",
+                           "subcategory":  "Keju",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  72400
+                       },
+                       {
+                           "sku":  "SI-0108",
+                           "product_name":  "Butter salted",
+                           "brand":  "Anchor",
+                           "package":  "200 g",
+                           "subcategory":  "Mentega",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  72490
+                       },
+                       {
+                           "sku":  "SI-0109",
+                           "product_name":  "Margarin",
+                           "brand":  "Blue Band",
+                           "package":  "200 g",
+                           "subcategory":  "Margarin",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  12900
+                       },
+                       {
+                           "sku":  "SI-0110",
+                           "product_name":  "Margarine original",
+                           "brand":  "Meadow Lea",
+                           "package":  "250 g",
+                           "subcategory":  "Margarin",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  38290
+                       },
+                       {
+                           "sku":  "SI-0111",
+                           "product_name":  "Telur ayam",
+                           "brand":  "365",
+                           "package":  "10 butir",
+                           "subcategory":  "Telur",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  29900
+                       },
+                       {
+                           "sku":  "SI-0112",
+                           "product_name":  "Roti tawar",
+                           "brand":  "Sari Roti",
+                           "package":  "20 lembar",
+                           "subcategory":  "Roti",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  18000
+                       },
+                       {
+                           "sku":  "SI-0113",
+                           "product_name":  "Roti gandum",
+                           "brand":  "Sari Roti",
+                           "package":  "1 pack",
+                           "subcategory":  "Roti",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  22000
+                       },
+                       {
+                           "sku":  "SI-0114",
+                           "product_name":  "Selai stroberi",
+                           "brand":  "Morin",
+                           "package":  "170 g",
+                           "subcategory":  "Selai",
+                           "catalog_category":  "Dairy, Telur \u0026 Bakery",
+                           "reference_source":  "Super Indo",
+                           "price":  16900
+                       },
+                       {
+                           "sku":  "SI-0115",
+                           "product_name":  "Chicken nugget original",
+                           "brand":  "So Good",
+                           "package":  "400 g",
+                           "subcategory":  "Nugget",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  57890
+                       },
+                       {
+                           "sku":  "SI-0116",
+                           "product_name":  "Chicken nugget crunchy",
+                           "brand":  "Belfoods",
+                           "package":  "500 g",
+                           "subcategory":  "Nugget",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  47990
+                       },
+                       {
+                           "sku":  "SI-0117",
+                           "product_name":  "Chicken nugget",
+                           "brand":  "Fiesta",
+                           "package":  "400 g",
+                           "subcategory":  "Nugget",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  55190
+                       },
+                       {
+                           "sku":  "SI-0118",
+                           "product_name":  "Sosis sapi/ayam",
+                           "brand":  "365",
+                           "package":  "500 g",
+                           "subcategory":  "Sosis",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  32900
+                       },
+                       {
+                           "sku":  "SI-0119",
+                           "product_name":  "Sosis frankfurter",
+                           "brand":  "Kanzler",
+                           "package":  "300 g",
+                           "subcategory":  "Sosis",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  53890
+                       },
+                       {
+                           "sku":  "SI-0120",
+                           "product_name":  "Sosis sapi goreng",
+                           "brand":  "Bernardi",
+                           "package":  "360 g",
+                           "subcategory":  "Sosis",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  57890
+                       },
+                       {
+                           "sku":  "SI-0121",
+                           "product_name":  "Shoestring fries",
+                           "brand":  "Just Fry",
+                           "package":  "900 g",
+                           "subcategory":  "Kentang beku",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  43190
+                       },
+                       {
+                           "sku":  "SI-0122",
+                           "product_name":  "Chicken gyoza",
+                           "brand":  "Ajinomoto",
+                           "package":  "200 g",
+                           "subcategory":  "Dimsum",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  47900
+                       },
+                       {
+                           "sku":  "SI-0123",
+                           "product_name":  "Bakso sapi all in one",
+                           "brand":  "Mabell",
+                           "package":  "250 g",
+                           "subcategory":  "Bakso",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  79990
+                       },
+                       {
+                           "sku":  "SI-0124",
+                           "product_name":  "Mini pau ayam/cokelat",
+                           "brand":  "Wei Wang",
+                           "package":  "430 g",
+                           "subcategory":  "Pau",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  46990
+                       },
+                       {
+                           "sku":  "SI-0125",
+                           "product_name":  "Ice cream box",
+                           "brand":  "Diamond",
+                           "package":  "700 ml",
+                           "subcategory":  "Es krim",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  27500
+                       },
+                       {
+                           "sku":  "SI-0126",
+                           "product_name":  "Ice cream 2 in 1",
+                           "brand":  "Aice",
+                           "package":  "800 ml",
+                           "subcategory":  "Es krim",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  58990
+                       },
+                       {
+                           "sku":  "SI-0127",
+                           "product_name":  "Nasi ayam geprek",
+                           "brand":  "Ready to Eat",
+                           "package":  "pack",
+                           "subcategory":  "Makanan siap saji",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  16450
+                       },
+                       {
+                           "sku":  "SI-0128",
+                           "product_name":  "Chicken karaage",
+                           "brand":  "365",
+                           "package":  "500 g",
+                           "subcategory":  "Olahan ayam",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  55900
+                       },
+                       {
+                           "sku":  "SI-0129",
+                           "product_name":  "Chicken egg roll",
+                           "brand":  "365",
+                           "package":  "350 g",
+                           "subcategory":  "Olahan ayam",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  39900
+                       },
+                       {
+                           "sku":  "SI-0130",
+                           "product_name":  "Chicken katsu",
+                           "brand":  "Sreeya",
+                           "package":  "250 g",
+                           "subcategory":  "Olahan ayam",
+                           "catalog_category":  "Frozen \u0026 Siap Saji",
+                           "reference_source":  "Super Indo",
+                           "price":  28190
+                       },
+                       {
+                           "sku":  "SI-0131",
+                           "product_name":  "Biskuit sandwich cokelat",
+                           "brand":  "Oreo",
+                           "package":  "133 g",
+                           "subcategory":  "Biskuit",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  10500
+                       },
+                       {
+                           "sku":  "SI-0132",
+                           "product_name":  "Biskuit crackers",
+                           "brand":  "Roma",
+                           "package":  "keluarga",
+                           "subcategory":  "Biskuit",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  9500
+                       },
+                       {
+                           "sku":  "SI-0133",
+                           "product_name":  "Wafer cokelat",
+                           "brand":  "Tango",
+                           "package":  "130 g",
+                           "subcategory":  "Wafer",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  9500
+                       },
+                       {
+                           "sku":  "SI-0134",
+                           "product_name":  "Cokelat bar",
+                           "brand":  "SilverQueen",
+                           "package":  "varian  chunk",
+                           "subcategory":  "Cokelat",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  15500
+                       },
+                       {
+                           "sku":  "SI-0135",
+                           "product_name":  "Permen mint",
+                           "brand":  "Mentos",
+                           "package":  "37 g",
+                           "subcategory":  "Permen",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  7500
+                       },
+                       {
+                           "sku":  "SI-0136",
+                           "product_name":  "Keripik kentang",
+                           "brand":  "Chitato",
+                           "package":  "68 g",
+                           "subcategory":  "Keripik",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  12500
+                       },
+                       {
+                           "sku":  "SI-0137",
+                           "product_name":  "Snack jagung",
+                           "brand":  "Taro",
+                           "package":  "70 g",
+                           "subcategory":  "Snack",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  8500
+                       },
+                       {
+                           "sku":  "SI-0138",
+                           "product_name":  "Kacang panggang",
+                           "brand":  "Garuda",
+                           "package":  "100 g",
+                           "subcategory":  "Kacang",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  10500
+                       },
+                       {
+                           "sku":  "SI-0139",
+                           "product_name":  "Choco pie",
+                           "brand":  "Lotte",
+                           "package":  "6 pcs",
+                           "subcategory":  "Kue",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  13500
+                       },
+                       {
+                           "sku":  "SI-0140",
+                           "product_name":  "Roti isi",
+                           "brand":  "Mr Bread",
+                           "package":  "pcs",
+                           "subcategory":  "Roti manis",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  6500
+                       },
+                       {
+                           "sku":  "SI-0141",
+                           "product_name":  "Air mineral",
+                           "brand":  "Aqua",
+                           "package":  "600 ml",
+                           "subcategory":  "Air mineral",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  4000
+                       },
+                       {
+                           "sku":  "SI-0142",
+                           "product_name":  "Air mineral",
+                           "brand":  "Le Minerale",
+                           "package":  "600 ml",
+                           "subcategory":  "Air mineral",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  3500
+                       },
+                       {
+                           "sku":  "SI-0143",
+                           "product_name":  "Teh melati",
+                           "brand":  "Teh Pucuk Harum",
+                           "package":  "350 ml",
+                           "subcategory":  "Teh siap minum",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  4000
+                       },
+                       {
+                           "sku":  "SI-0144",
+                           "product_name":  "Teh botol",
+                           "brand":  "Sosro",
+                           "package":  "450 ml",
+                           "subcategory":  "Teh siap minum",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  5000
+                       },
+                       {
+                           "sku":  "SI-0145",
+                           "product_name":  "Cola",
+                           "brand":  "Coca-Cola",
+                           "package":  "390 ml",
+                           "subcategory":  "Minuman bersoda",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  6500
+                       },
+                       {
+                           "sku":  "SI-0146",
+                           "product_name":  "Minuman isotonik",
+                           "brand":  "Pocari Sweat",
+                           "package":  "500 ml",
+                           "subcategory":  "Isotonik",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  8500
+                       },
+                       {
+                           "sku":  "SI-0147",
+                           "product_name":  "Jus jeruk",
+                           "brand":  "Buavita",
+                           "package":  "250 ml",
+                           "subcategory":  "Jus",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  8500
+                       },
+                       {
+                           "sku":  "SI-0148",
+                           "product_name":  "Kopi 3-in-1",
+                           "brand":  "Good Day",
+                           "package":  "renceng",
+                           "subcategory":  "Kopi instan",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  12000
+                       },
+                       {
+                           "sku":  "SI-0149",
+                           "product_name":  "Kopi hitam",
+                           "brand":  "Nescafe Classic",
+                           "package":  "2 g x 10",
+                           "subcategory":  "Kopi instan",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  18900
+                       },
+                       {
+                           "sku":  "SI-0150",
+                           "product_name":  "Teh celup",
+                           "brand":  "SariWangi",
+                           "package":  "25 bags",
+                           "subcategory":  "Teh celup",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  11500
+                       },
+                       {
+                           "sku":  "SI-0151",
+                           "product_name":  "Kopi susu kaleng",
+                           "brand":  "Kopi ABC",
+                           "package":  "200 ml",
+                           "subcategory":  "Susu kental kopi",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  6500
+                       },
+                       {
+                           "sku":  "SI-0152",
+                           "product_name":  "Minuman jeruk",
+                           "brand":  "Nutrisari",
+                           "package":  "renceng",
+                           "subcategory":  "Minuman serbuk",
+                           "catalog_category":  "Snack, Bakery \u0026 Minuman",
+                           "reference_source":  "Super Indo",
+                           "price":  12000
+                       }
+                   ],
+    "hokky":  [
+                  {
+                      "sku":  "DGSF-001",
+                      "product_name":  "Daging Sapi Sirloin Premium",
+                      "brand":  "Hokky Meat",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Daging Sapi",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  135000
+                  },
+                  {
+                      "sku":  "DGSF-002",
+                      "product_name":  "Daging Sapi Tenderloin",
+                      "brand":  "Hokky Meat",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Daging Sapi",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  180000
+                  },
+                  {
+                      "sku":  "DGSF-003",
+                      "product_name":  "Daging Sapi Giling",
+                      "brand":  "Hokky Meat",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Daging Sapi",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  75000
+                  },
+                  {
+                      "sku":  "DGSF-004",
+                      "product_name":  "Iga Sapi",
+                      "brand":  "Hokky Meat",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Daging Sapi",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  110000
+                  },
+                  {
+                      "sku":  "DGSF-005",
+                      "product_name":  "Buntut Sapi",
+                      "brand":  "Hokky Meat",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Daging Sapi",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  160000
+                  },
+                  {
+                      "sku":  "DGSF-006",
+                      "product_name":  "Wagyu Ribeye A5",
+                      "brand":  "Hokky Premium",
+                      "package":  "200g (Pack)",
+                      "subcategory":  "Daging Sapi",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  420000
+                  },
+                  {
+                      "sku":  "DGSF-007",
+                      "product_name":  "Dada Ayam Fillet",
+                      "brand":  "Hokky Poultry",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Daging Ayam",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  35000
+                  },
+                  {
+                      "sku":  "DGSF-008",
+                      "product_name":  "Paha Ayam Atas Bawah",
+                      "brand":  "Hokky Poultry",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Daging Ayam",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  28000
+                  },
+                  {
+                      "sku":  "DGSF-009",
+                      "product_name":  "Ayam Kampung Utuh",
+                      "brand":  "Hokky Poultry",
+                      "package":  "1 Ekor (Pcs)",
+                      "subcategory":  "Daging Ayam",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  75000
+                  },
+                  {
+                      "sku":  "DGSF-010",
+                      "product_name":  "Sayap Ayam",
+                      "brand":  "Hokky Poultry",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Daging Ayam",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  25000
+                  },
+                  {
+                      "sku":  "DGSF-011",
+                      "product_name":  "Udang Pancet Besar",
+                      "brand":  "Hokky Seafood",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Seafood",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  85000
+                  },
+                  {
+                      "sku":  "DGSF-012",
+                      "product_name":  "Cumi-cumi Kupas",
+                      "brand":  "Hokky Seafood",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Seafood",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  65000
+                  },
+                  {
+                      "sku":  "DGSF-013",
+                      "product_name":  "Ikan Salmon Fillet",
+                      "brand":  "Marine",
+                      "package":  "200g (Pack)",
+                      "subcategory":  "Seafood",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  85000
+                  },
+                  {
+                      "sku":  "DGSF-014",
+                      "product_name":  "Ikan Dori Fillet",
+                      "brand":  "Marine",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Seafood",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  55000
+                  },
+                  {
+                      "sku":  "DGSF-015",
+                      "product_name":  "Ikan Gurame Hidup",
+                      "brand":  "Hokky Seafood",
+                      "package":  "1 Ekor (Pcs)",
+                      "subcategory":  "Seafood",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  45000
+                  },
+                  {
+                      "sku":  "DGSF-016",
+                      "product_name":  "Kepiting Bakau",
+                      "brand":  "Hokky Seafood",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Seafood",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  140000
+                  },
+                  {
+                      "sku":  "DGSF-017",
+                      "product_name":  "Kerang Hijau",
+                      "brand":  "Hokky Seafood",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Seafood",
+                      "catalog_category":  "Daging \u0026 Seafood",
+                      "reference_source":  "Hokky",
+                      "price":  35000
+                  },
+                  {
+                      "sku":  "BHSY-001",
+                      "product_name":  "Apel Fuji Premium",
+                      "brand":  "Sunmoon",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  60000
+                  },
+                  {
+                      "sku":  "BHSY-002",
+                      "product_name":  "Jeruk Mandarin",
+                      "brand":  "Sunmoon",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  55000
+                  },
+                  {
+                      "sku":  "BHSY-003",
+                      "product_name":  "Pisang Cavendish",
+                      "brand":  "Sunpride",
+                      "package":  "1 Sisir (Pcs)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  22000
+                  },
+                  {
+                      "sku":  "BHSY-004",
+                      "product_name":  "Anggur Merah Red Globe",
+                      "brand":  "Sunmoon",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  45000
+                  },
+                  {
+                      "sku":  "BHSY-005",
+                      "product_name":  "Anggur Muscat",
+                      "brand":  "Sunmoon",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  75000
+                  },
+                  {
+                      "sku":  "BHSY-006",
+                      "product_name":  "Mangga Harumanis",
+                      "brand":  "Hokky Fresh",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  35000
+                  },
+                  {
+                      "sku":  "BHSY-007",
+                      "product_name":  "Melon Golden",
+                      "brand":  "Hokky Fresh",
+                      "package":  "1 Ekor (Pcs)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  40000
+                  },
+                  {
+                      "sku":  "BHSY-008",
+                      "product_name":  "Semangka Merah Non Biji",
+                      "brand":  "Hokky Fresh",
+                      "package":  "1 Ekor (Pcs)",
+                      "subcategory":  "Buah",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  30000
+                  },
+                  {
+                      "sku":  "BHSY-009",
+                      "product_name":  "Brokoli Hijau",
+                      "brand":  "Hokky Fresh",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  22000
+                  },
+                  {
+                      "sku":  "BHSY-010",
+                      "product_name":  "Kembang Kol",
+                      "brand":  "Hokky Fresh",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  20000
+                  },
+                  {
+                      "sku":  "BHSY-011",
+                      "product_name":  "Wortel Brastagi",
+                      "brand":  "Hokky Fresh",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  15000
+                  },
+                  {
+                      "sku":  "BHSY-012",
+                      "product_name":  "Kentang Dieng",
+                      "brand":  "Hokky Fresh",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  23000
+                  },
+                  {
+                      "sku":  "BHSY-013",
+                      "product_name":  "Bawang Merah",
+                      "brand":  "Hokky Fresh",
+                      "package":  "250g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  15000
+                  },
+                  {
+                      "sku":  "BHSY-014",
+                      "product_name":  "Bawang Putih Kating",
+                      "brand":  "Hokky Fresh",
+                      "package":  "250g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  16000
+                  },
+                  {
+                      "sku":  "BHSY-015",
+                      "product_name":  "Tomat Merah",
+                      "brand":  "Hokky Fresh",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  12000
+                  },
+                  {
+                      "sku":  "BHSY-016",
+                      "product_name":  "Selada Keriting",
+                      "brand":  "Hokky Fresh",
+                      "package":  "250g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  10000
+                  },
+                  {
+                      "sku":  "BHSY-017",
+                      "product_name":  "Jamur Enoki",
+                      "brand":  "Hokky Fresh",
+                      "package":  "100g (Pack)",
+                      "subcategory":  "Sayur",
+                      "catalog_category":  "Buah \u0026 Sayur",
+                      "reference_source":  "Hokky",
+                      "price":  6500
+                  },
+                  {
+                      "sku":  "SSOK-001",
+                      "product_name":  "Susu UHT Full Cream",
+                      "brand":  "Greenfields",
+                      "package":  "1L (Kotak)",
+                      "subcategory":  "Susu Cair",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  20000
+                  },
+                  {
+                      "sku":  "SSOK-002",
+                      "product_name":  "Susu Pasteurisasi Fresh Milk",
+                      "brand":  "Greenfields",
+                      "package":  "1L (Botol)",
+                      "subcategory":  "Susu Cair",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  30000
+                  },
+                  {
+                      "sku":  "SSOK-003",
+                      "product_name":  "Susu UHT Cokelat",
+                      "brand":  "Ultra Milk",
+                      "package":  "1L (Kotak)",
+                      "subcategory":  "Susu Cair",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  17500
+                  },
+                  {
+                      "sku":  "SSOK-004",
+                      "product_name":  "Susu Kedelai",
+                      "brand":  "V-Soy",
+                      "package":  "1L (Kotak)",
+                      "subcategory":  "Susu Cair",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  25000
+                  },
+                  {
+                      "sku":  "SSOK-005",
+                      "product_name":  "Susu Bubuk Full Cream",
+                      "brand":  "Dancow",
+                      "package":  "800g (Box)",
+                      "subcategory":  "Susu Bubuk",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  90000
+                  },
+                  {
+                      "sku":  "SSOK-006",
+                      "product_name":  "SKM Putih",
+                      "brand":  "Frisian Flag",
+                      "package":  "370g (Kaleng)",
+                      "subcategory":  "Susu Kental Manis",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  12000
+                  },
+                  {
+                      "sku":  "SSOK-007",
+                      "product_name":  "Keju Cheddar Olahan",
+                      "brand":  "Kraft",
+                      "package":  "165g (Kotak)",
+                      "subcategory":  "Keju",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  22000
+                  },
+                  {
+                      "sku":  "SSOK-008",
+                      "product_name":  "Keju Mozzarella",
+                      "brand":  "Perfetto",
+                      "package":  "250g (Pack)",
+                      "subcategory":  "Keju",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  45000
+                  },
+                  {
+                      "sku":  "SSOK-009",
+                      "product_name":  "Keju Parmesan Parut",
+                      "brand":  "Kraft",
+                      "package":  "100g (Botol)",
+                      "subcategory":  "Keju",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  60000
+                  },
+                  {
+                      "sku":  "SSOK-010",
+                      "product_name":  "Keju Cream Cheese",
+                      "brand":  "Anchor",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Keju",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  120000
+                  },
+                  {
+                      "sku":  "SSOK-011",
+                      "product_name":  "Butter Unsalted",
+                      "brand":  "Anchor",
+                      "package":  "227g (Pack)",
+                      "subcategory":  "Mentega \u0026 Margarin",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  42000
+                  },
+                  {
+                      "sku":  "SSOK-012",
+                      "product_name":  "Butter Salted",
+                      "brand":  "Elle \u0026 Vire",
+                      "package":  "200g (Pack)",
+                      "subcategory":  "Mentega \u0026 Margarin",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  55000
+                  },
+                  {
+                      "sku":  "SSOK-013",
+                      "product_name":  "Margarin Serbaguna",
+                      "brand":  "Blue Band",
+                      "package":  "200g (Sachet)",
+                      "subcategory":  "Mentega \u0026 Margarin",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  9000
+                  },
+                  {
+                      "sku":  "SSOK-014",
+                      "product_name":  "Margarin Cake \u0026 Cookie",
+                      "brand":  "Blue Band",
+                      "package":  "200g (Sachet)",
+                      "subcategory":  "Mentega \u0026 Margarin",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  12000
+                  },
+                  {
+                      "sku":  "SSOK-015",
+                      "product_name":  "Yoghurt Plain",
+                      "brand":  "Biokul",
+                      "package":  "1L (Cup)",
+                      "subcategory":  "Yoghurt",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  40000
+                  },
+                  {
+                      "sku":  "SSOK-016",
+                      "product_name":  "Greek Yoghurt Plain",
+                      "brand":  "Elle \u0026 Vire",
+                      "package":  "125g (Cup)",
+                      "subcategory":  "Yoghurt",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  25000
+                  },
+                  {
+                      "sku":  "SSOK-017",
+                      "product_name":  "Whipping Cream Cair",
+                      "brand":  "Anchor",
+                      "package":  "1L (Kotak)",
+                      "subcategory":  "Krim",
+                      "catalog_category":  "Susu \u0026 Olahan Keju",
+                      "reference_source":  "Hokky",
+                      "price":  85000
+                  },
+                  {
+                      "sku":  "BHNM-001",
+                      "product_name":  "Beras Setra Ramos",
+                      "brand":  "Sania",
+                      "package":  "5kg (Karung)",
+                      "subcategory":  "Beras",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  70000
+                  },
+                  {
+                      "sku":  "BHNM-002",
+                      "product_name":  "Beras Merah Organik",
+                      "brand":  "Hotel",
+                      "package":  "2kg (Pack)",
+                      "subcategory":  "Beras",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  55000
+                  },
+                  {
+                      "sku":  "BHNM-003",
+                      "product_name":  "Beras Basmati",
+                      "brand":  "Daawat",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Beras",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  60000
+                  },
+                  {
+                      "sku":  "BHNM-004",
+                      "product_name":  "Beras Ketan Putih",
+                      "brand":  "Rose Brand",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Beras",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  15000
+                  },
+                  {
+                      "sku":  "BHNM-005",
+                      "product_name":  "Minyak Goreng Sawit",
+                      "brand":  "Bimoli",
+                      "package":  "2L (Pouch)",
+                      "subcategory":  "Minyak Goreng",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  35000
+                  },
+                  {
+                      "sku":  "BHNM-006",
+                      "product_name":  "Minyak Zaitun Extra Virgin",
+                      "brand":  "Bertolli",
+                      "package":  "500ml (Botol)",
+                      "subcategory":  "Minyak Goreng",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  120000
+                  },
+                  {
+                      "sku":  "BHNM-007",
+                      "product_name":  "Minyak Kanola",
+                      "brand":  "Tropicana Slim",
+                      "package":  "1L (Botol)",
+                      "subcategory":  "Minyak Goreng",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  70000
+                  },
+                  {
+                      "sku":  "BHNM-008",
+                      "product_name":  "Tepung Terigu Protein Sedang",
+                      "brand":  "Segitiga Biru",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Tepung",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  12000
+                  },
+                  {
+                      "sku":  "BHNM-009",
+                      "product_name":  "Tepung Terigu Protein Tinggi",
+                      "brand":  "Cakra Kembar",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Tepung",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  13000
+                  },
+                  {
+                      "sku":  "BHNM-010",
+                      "product_name":  "Tepung Maizena",
+                      "brand":  "Maizenaku",
+                      "package":  "150g (Kotak)",
+                      "subcategory":  "Tepung",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  8000
+                  },
+                  {
+                      "sku":  "BHNM-011",
+                      "product_name":  "Tepung Tapioka",
+                      "brand":  "Rose Brand",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Tepung",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  8500
+                  },
+                  {
+                      "sku":  "BHNM-012",
+                      "product_name":  "Gula Pasir Putih",
+                      "brand":  "Gulaku",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Gula",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  16000
+                  },
+                  {
+                      "sku":  "BHNM-013",
+                      "product_name":  "Gula Merah Tebu",
+                      "brand":  "Gulaku",
+                      "package":  "1kg (Pack)",
+                      "subcategory":  "Gula",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  17000
+                  },
+                  {
+                      "sku":  "BHNM-014",
+                      "product_name":  "Gula Aren Organik",
+                      "brand":  "Mahorahora",
+                      "package":  "250g (Pack)",
+                      "subcategory":  "Gula",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  25000
+                  },
+                  {
+                      "sku":  "BHNM-015",
+                      "product_name":  "Spaghetti No.5",
+                      "brand":  "La Fonte",
+                      "package":  "450g (Pack)",
+                      "subcategory":  "Pasta \u0026 Mie",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  16000
+                  },
+                  {
+                      "sku":  "BHNM-016",
+                      "product_name":  "Macaroni",
+                      "brand":  "La Fonte",
+                      "package":  "400g (Pack)",
+                      "subcategory":  "Pasta \u0026 Mie",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  18000
+                  },
+                  {
+                      "sku":  "BHNM-017",
+                      "product_name":  "Mie Telur Kering",
+                      "brand":  "Cap 3 Ayam",
+                      "package":  "200g (Pack)",
+                      "subcategory":  "Pasta \u0026 Mie",
+                      "catalog_category":  "Bahan Makanan",
+                      "reference_source":  "Hokky",
+                      "price":  5500
+                  },
+                  {
+                      "sku":  "BUMB-001",
+                      "product_name":  "Garam Beryodium Halus",
+                      "brand":  "Dolphing",
+                      "package":  "500g (Pack)",
+                      "subcategory":  "Bumbu Dasar",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  5000
+                  },
+                  {
+                      "sku":  "BUMB-002",
+                      "product_name":  "Garam Laut Kasar",
+                      "brand":  "Kusamba",
+                      "package":  "250g (Pack)",
+                      "subcategory":  "Bumbu Dasar",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  13500
+                  },
+                  {
+                      "sku":  "BUMB-003",
+                      "product_name":  "Lada Putih Bubuk",
+                      "brand":  "Koepoe Koepoe",
+                      "package":  "85g (Botol)",
+                      "subcategory":  "Bumbu Dasar",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  20000
+                  },
+                  {
+                      "sku":  "BUMB-004",
+                      "product_name":  "Lada Hitam Butir",
+                      "brand":  "Jay\u0027s Kitchen",
+                      "package":  "50g (Botol)",
+                      "subcategory":  "Bumbu Dasar",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  22000
+                  },
+                  {
+                      "sku":  "BUMB-005",
+                      "product_name":  "Kecap Manis",
+                      "brand":  "Bango",
+                      "package":  "520ml (Pouch)",
+                      "subcategory":  "Saus \u0026 Kecap",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  22000
+                  },
+                  {
+                      "sku":  "BUMB-006",
+                      "product_name":  "Kecap Asin",
+                      "brand":  "ABC",
+                      "package":  "133ml (Botol)",
+                      "subcategory":  "Saus \u0026 Kecap",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  5500
+                  },
+                  {
+                      "sku":  "BUMB-007",
+                      "product_name":  "Saus Tiram",
+                      "brand":  "Lee Kum Kee",
+                      "package":  "510g (Botol)",
+                      "subcategory":  "Saus \u0026 Kecap",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  35000
+                  },
+                  {
+                      "sku":  "BUMB-008",
+                      "product_name":  "Minyak Wijen",
+                      "brand":  "Lee Kum Kee",
+                      "package":  "115ml (Botol)",
+                      "subcategory":  "Saus \u0026 Kecap",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  25000
+                  },
+                  {
+                      "sku":  "BUMB-009",
+                      "product_name":  "Saus Sambal Asli",
+                      "brand":  "ABC",
+                      "package":  "340ml (Botol)",
+                      "subcategory":  "Saus \u0026 Kecap",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  15000
+                  },
+                  {
+                      "sku":  "BUMB-010",
+                      "product_name":  "Saus Tomat",
+                      "brand":  "Del Monte",
+                      "package":  "340ml (Botol)",
+                      "subcategory":  "Saus \u0026 Kecap",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  12500
+                  },
+                  {
+                      "sku":  "BUMB-011",
+                      "product_name":  "Ketumbar Bubuk",
+                      "brand":  "Desaku",
+                      "package":  "15g (Sachet)",
+                      "subcategory":  "Bumbu Rempah",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  2000
+                  },
+                  {
+                      "sku":  "BUMB-012",
+                      "product_name":  "Kunyit Bubuk",
+                      "brand":  "Desaku",
+                      "package":  "15g (Sachet)",
+                      "subcategory":  "Bumbu Rempah",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  1800
+                  },
+                  {
+                      "sku":  "BUMB-013",
+                      "product_name":  "Oregano Leaves",
+                      "brand":  "Jay\u0027s Kitchen",
+                      "package":  "25g (Botol)",
+                      "subcategory":  "Bumbu Rempah",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  25000
+                  },
+                  {
+                      "sku":  "BUMB-014",
+                      "product_name":  "Kaldu Ayam Bubuk",
+                      "brand":  "Royco",
+                      "package":  "100g (Pack)",
+                      "subcategory":  "Bumbu Kaldu",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  5500
+                  },
+                  {
+                      "sku":  "BUMB-015",
+                      "product_name":  "Kaldu Jamur",
+                      "brand":  "Totole",
+                      "package":  "400g (Pack)",
+                      "subcategory":  "Bumbu Kaldu",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  35000
+                  },
+                  {
+                      "sku":  "BUMB-016",
+                      "product_name":  "Bumbu Nasi Goreng",
+                      "brand":  "Sajiku",
+                      "package":  "20g (Sachet)",
+                      "subcategory":  "Bumbu Instan",
+                      "catalog_category":  "Bumbu",
+                      "reference_source":  "Hokky",
+                      "price":  2500
+                  },
+                  {
+                      "sku":  "MINU-001",
+                      "product_name":  "Sirup Rasa Melon",
+                      "brand":  "Marjan",
+                      "package":  "460ml (Botol)",
+                      "subcategory":  "Sirup",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  22000
+                  },
+                  {
+                      "sku":  "MINU-002",
+                      "product_name":  "Sirup Rasa Cocopandan",
+                      "brand":  "Marjan",
+                      "package":  "460ml (Botol)",
+                      "subcategory":  "Sirup",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  19500
+                  },
+                  {
+                      "sku":  "MINU-003",
+                      "product_name":  "Sirup Squash Orange",
+                      "brand":  "ABC",
+                      "package":  "460ml (Botol)",
+                      "subcategory":  "Sirup",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  15000
+                  },
+                  {
+                      "sku":  "MINU-004",
+                      "product_name":  "Kopi Bubuk Arabika Gayo",
+                      "brand":  "Excelso",
+                      "package":  "200g (Pack)",
+                      "subcategory":  "Kopi Bubuk",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  60000
+                  },
+                  {
+                      "sku":  "MINU-005",
+                      "product_name":  "Kopi Instan Classic",
+                      "brand":  "Nescafe",
+                      "package":  "200g (Botol)",
+                      "subcategory":  "Kopi Bubuk",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  75000
+                  },
+                  {
+                      "sku":  "MINU-006",
+                      "product_name":  "Kopi Kapal Api Special",
+                      "brand":  "Kapal Api",
+                      "package":  "165g (Pack)",
+                      "subcategory":  "Kopi Bubuk",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  13500
+                  },
+                  {
+                      "sku":  "MINU-007",
+                      "product_name":  "Teh Celup Melati",
+                      "brand":  "Sariwangi",
+                      "package":  "25s (Box)",
+                      "subcategory":  "Teh Bubuk \u0026 Celup",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  8000
+                  },
+                  {
+                      "sku":  "MINU-008",
+                      "product_name":  "Teh Hijau Celup",
+                      "brand":  "Kepala Djenggot",
+                      "package":  "25s (Box)",
+                      "subcategory":  "Teh Bubuk \u0026 Celup",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  13500
+                  },
+                  {
+                      "sku":  "MINU-009",
+                      "product_name":  "Teh Hitam English Breakfast",
+                      "brand":  "Twinings",
+                      "package":  "25s (Box)",
+                      "subcategory":  "Teh Bubuk \u0026 Celup",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  65000
+                  },
+                  {
+                      "sku":  "MINU-010",
+                      "product_name":  "Cocoa Powder",
+                      "brand":  "Van Houten",
+                      "package":  "180g (Kotak)",
+                      "subcategory":  "Cokelat Bubuk",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  42000
+                  },
+                  {
+                      "sku":  "MINU-011",
+                      "product_name":  "Minuman Cokelat Malt",
+                      "brand":  "Milo",
+                      "package":  "1kg (Pouch)",
+                      "subcategory":  "Cokelat Bubuk",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  95000
+                  },
+                  {
+                      "sku":  "MINU-012",
+                      "product_name":  "Serbuk Jeruk Nutrisari",
+                      "brand":  "NutriSari",
+                      "package":  "40s (Pack)",
+                      "subcategory":  "Minuman Serbuk",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  40000
+                  },
+                  {
+                      "sku":  "MINU-013",
+                      "product_name":  "Konsentrat Jus Lemon",
+                      "brand":  "Lemonita",
+                      "package":  "500ml (Botol)",
+                      "subcategory":  "Jus Mentah",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  35000
+                  },
+                  {
+                      "sku":  "MINU-014",
+                      "product_name":  "Konsentrat Jus Jeruk",
+                      "brand":  "Sunquick",
+                      "package":  "330ml (Botol)",
+                      "subcategory":  "Jus Mentah",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  32000
+                  },
+                  {
+                      "sku":  "MINU-015",
+                      "product_name":  "Air Mineral Galon",
+                      "brand":  "Aqua",
+                      "package":  "19L (Galon)",
+                      "subcategory":  "Air Mineral",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  20000
+                  },
+                  {
+                      "sku":  "MINU-016",
+                      "product_name":  "Air Mineral Botol",
+                      "brand":  "Le Minerale",
+                      "package":  "600ml (Botol)",
+                      "subcategory":  "Air Mineral",
+                      "catalog_category":  "Minuman",
+                      "reference_source":  "Hokky",
+                      "price":  3000
+                  }
+              ]
+}
